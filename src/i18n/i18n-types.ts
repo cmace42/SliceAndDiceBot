@@ -106,6 +106,40 @@ type RootTranslation = {
 				DESCRIPTION: RequiredParams<'state'>
 			}
 		}
+		REFRESH: {
+			/**
+			 * R​e​f​r​e​s​h​ ​t​h​e​ ​l​i​s​t​ ​o​f​ ​g​a​m​e​s​.
+			 */
+			DESCRIPTION: string
+			EMBED: {
+				/**
+				 * O​w​n​e​r
+				 */
+				OWNER: string
+				/**
+				 * N​u​m​b​e​r​ ​o​f​ ​p​l​a​y​e​r​s
+				 */
+				NBRJ: string
+				/**
+				 * E​x​p​e​c​t​e​d​ ​p​l​a​y​t​i​m​e
+				 */
+				TIME: string
+				/**
+				 * B​e​t​w​e​e​n​ ​{​v​a​r​1​}​ ​a​n​d​ ​{​v​a​r​2​}
+				 * @param {string} var1
+				 * @param {string} var2
+				 */
+				BETWEEN: RequiredParams<'var1' | 'var2'>
+				/**
+				 * U​n​k​n​o​w​n
+				 */
+				UNKNOWN: string
+				/**
+				 * C​u​r​r​e​n​t​l​y​ ​U​n​a​v​a​i​l​a​b​l​e​.
+				 */
+				UNAVAILABLE: string
+			}
+		}
 		STATS: {
 			/**
 			 * G​e​t​ ​s​o​m​e​ ​s​t​a​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​b​o​t​.
@@ -260,6 +294,38 @@ export type TranslationFunctions = {
 				 * Maintenance mode set to `{state}`.
 				 */
 				DESCRIPTION: (arg: { state: string }) => LocalizedString
+			}
+		}
+		REFRESH: {
+			/**
+			 * Refresh the list of games.
+			 */
+			DESCRIPTION: () => LocalizedString
+			EMBED: {
+				/**
+				 * Owner
+				 */
+				OWNER: () => LocalizedString
+				/**
+				 * Number of players
+				 */
+				NBRJ: () => LocalizedString
+				/**
+				 * Expected playtime
+				 */
+				TIME: () => LocalizedString
+				/**
+				 * Between {var1} and {var2}
+				 */
+				BETWEEN: (arg: { var1: string, var2: string }) => LocalizedString
+				/**
+				 * Unknown
+				 */
+				UNKNOWN: () => LocalizedString
+				/**
+				 * Currently Unavailable.
+				 */
+				UNAVAILABLE: () => LocalizedString
 			}
 		}
 		STATS: {

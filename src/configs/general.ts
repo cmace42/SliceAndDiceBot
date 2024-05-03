@@ -2,10 +2,10 @@ import { env } from '@/env'
 
 export const generalConfig: GeneralConfigType = {
 
-	name: 'tscord', // the name of your bot
-	description: '', // the description of your bot
+	name: 'SliceNDiceBot', // the name of your bot
+	description: 'Game planner', // the description of your bot
 	defaultLocale: 'en', // default language of the bot, must be a valid locale
-	ownerId: env.BOT_OWNER_ID,
+	ownerId: env?.BOT_OWNER_ID,
 	timezone: 'Europe/Paris', // default TimeZone to well format and localize dates (logs, stats, etc)
 
 	simpleCommandsPrefix: '!', // default prefix for simple command messages (old way to do commands on discord)
@@ -25,12 +25,16 @@ export const generalConfig: GeneralConfigType = {
 	// define the bot activities (phrases under its name). Types can be: PLAYING, LISTENING, WATCHING, STREAMING
 	activities: [
 		{
-			text: 'discord.js v14 with tscord',
+			text: 'Starting a twilight imperium game',
 			type: 'PLAYING',
 		},
 		{
-			text: 'some knowledge',
-			type: 'STREAMING',
+			text: 'Still playing twilight imperium',
+			type: 'PLAYING',
+		},
+		{
+			text: 'On a quick game of Skull',
+			type: 'PLAYING',
 		},
 	],
 

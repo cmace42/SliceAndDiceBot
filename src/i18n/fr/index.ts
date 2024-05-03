@@ -41,6 +41,17 @@ const fr = {
 				DESCRIPTION: 'Le mode maintenance a été définie à `{state}`.',
 			},
 		},
+		REFRESH: {
+			DESCRIPTION: 'Actualise la liste des jeux.',
+			EMBED: {
+				OWNER: 'Proprio',
+				NBRJ: 'Nombre de joueurs',
+				TIME: 'Temps de jeu',
+				BETWEEN: 'Entre {var1} et {var2}',
+				UNKNOWN: 'Inconnu',
+				UNAVAILABLE: 'Actuellement indisponible.',
+			},
+		},
 		STATS: {
 			DESCRIPTION: 'Obtiens des statistiques sur le bot.',
 			HEADERS: {

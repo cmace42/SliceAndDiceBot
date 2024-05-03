@@ -1,0 +1,13 @@
+[
+	{
+		"name": "Eclipse",
+		"proprio": "flop",
+		"timemin": 45,
+		"timemax": 60,
+		"nbrmin": 2,
+		"nbrmax": 6,
+		"description": "Conquête intergalactique à base de technologies et de vaisseaux modulaires",
+		"available": true,
+		"jdr": false
+	  }
+]

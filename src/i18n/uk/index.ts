@@ -41,6 +41,17 @@ const uk = {
 				DESCRIPTION: 'Режим технічних робіт встановлено на `{state}`.',
 			},
 		},
+		REFRESH: {
+			DESCRIPTION: 'Refresh the list of games.',
+			EMBED: {
+				OWNER: 'Owner',
+				NBRJ: 'Number of players',
+				TIME: 'Expected playtime',
+				BETWEEN: 'Between {var1} and {var2}',
+				UNKNOWN: 'Unknown',
+				UNAVAILABLE: 'Currently Unavailable.',
+			},
+		},
 		STATS: {
 			DESCRIPTION: 'Подивитись статистику бота.',
 			HEADERS: {

@@ -41,6 +41,17 @@ const en = {
 				DESCRIPTION: 'Maintenance mode set to `{state:string}`.',
 			},
 		},
+		REFRESH: {
+			DESCRIPTION: 'Refresh the list of games.',
+			EMBED: {
+				OWNER: 'Owner',
+				NBRJ: 'Number of players',
+				TIME: 'Expected playtime',
+				BETWEEN: 'Between {var1:string} and {var2:string}',
+				UNKNOWN: 'Unknown',
+				UNAVAILABLE: 'Currently Unavailable.',
+			},
+		},
 		STATS: {
 			DESCRIPTION: 'Get some stats about the bot.',
 			HEADERS: {
