@@ -39,6 +39,11 @@ type RootTranslation = {
 		 * A​n​ ​u​n​k​n​o​w​n​ ​e​r​r​o​r​ ​o​c​c​u​r​r​e​d​.
 		 */
 		UNKNOWN: string
+		/**
+		 * {​n​a​m​e​}​ ​a​l​r​e​a​d​y​ ​e​x​i​s​t​.
+		 * @param {string} name
+		 */
+		AEXIST: RequiredParams<'name'>
 	}
 	SHARED: {
 		/**
@@ -140,6 +145,64 @@ type RootTranslation = {
 				UNAVAILABLE: string
 			}
 		}
+		EDIT: {
+			/**
+			 * E​d​i​t​ ​a​n​ ​e​x​i​s​t​i​n​g​ ​g​a​m​e​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				NAME: {
+					/**
+					 * n​a​m​e
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​g​a​m​e​ ​t​o​ ​b​e​ ​e​d​i​t​e​d​.
+					 */
+					DESCRIPTION: string
+				}
+				NEWNAME: {
+					/**
+					 * n​e​w​n​a​m​e
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​n​e​w​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​g​a​m​e​.
+					 */
+					DESCRIPTION: string
+				}
+				OWNER: {
+					/**
+					 * o​w​n​e​r
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​o​w​n​e​r​ ​o​f​ ​t​h​e​ ​g​a​m​e​.
+					 */
+					DESCRIPTION: string
+				}
+				TIMEMIN: {
+					/**
+					 * t​i​m​e​m​i​n
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​i​n​i​m​u​m​.
+					 */
+					DESCRIPTION: string
+				}
+				TIMEMAX: {
+					/**
+					 * t​i​m​e​m​a​x
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​a​x​i​m​u​m​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+		}
 		STATS: {
 			/**
 			 * G​e​t​ ​s​o​m​e​ ​s​t​a​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​b​o​t​.
@@ -232,6 +295,10 @@ export type TranslationFunctions = {
 		 * An unknown error occurred.
 		 */
 		UNKNOWN: () => LocalizedString
+		/**
+		 * {name} already exist.
+		 */
+		AEXIST: (arg: { name: string }) => LocalizedString
 	}
 	SHARED: {
 		/**
@@ -326,6 +393,64 @@ export type TranslationFunctions = {
 				 * Currently Unavailable.
 				 */
 				UNAVAILABLE: () => LocalizedString
+			}
+		}
+		EDIT: {
+			/**
+			 * Edit an existing game.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				NAME: {
+					/**
+					 * name
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The name of the game to be edited.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NEWNAME: {
+					/**
+					 * newname
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The new name of the game.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				OWNER: {
+					/**
+					 * owner
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The owner of the game.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				TIMEMIN: {
+					/**
+					 * timemin
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The expected play time minimum.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				TIMEMAX: {
+					/**
+					 * timemax
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The expected play time maximum.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
 			}
 		}
 		STATS: {

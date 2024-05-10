@@ -10,6 +10,7 @@ const fr = {
 	},
 	ERRORS: {
 		UNKNOWN: 'Une erreur est survenue.',
+		AEXIST: '{name} existe déjà.',
 	},
 	SHARED: {
 		NO_COMMAND_DESCRIPTION: 'Aucune description fournie.',
@@ -50,6 +51,31 @@ const fr = {
 				BETWEEN: 'Entre {var1} et {var2}',
 				UNKNOWN: 'Inconnu',
 				UNAVAILABLE: 'Actuellement indisponible.',
+			},
+		},
+		EDIT: {
+			DESCRIPTION: 'Modifier un jeu existant.',
+			OPTIONS: {
+				NAME: {
+					NAME: 'nom',
+					DESCRIPTION: 'Le nom du jeu à modifier.',
+				},
+				NEWNAME: {
+					NAME: 'nouveau_nom',
+					DESCRIPTION: 'Le nouveau nom du jeu.',
+				},
+				OWNER: {
+					NAME: 'proprio',
+					DESCRIPTION: 'Le propriétaire du jeu.',
+				},
+				TIMEMIN: {
+					NAME: 'tempsmin',
+					DESCRIPTION: 'Le temps de jeu minimum.',
+				},
+				TIMEMAX: {
+					NAME: 'tempsmax',
+					DESCRIPTION: 'Le temps de jeu maximum.',
+				},
 			},
 		},
 		STATS: {

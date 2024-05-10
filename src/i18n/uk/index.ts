@@ -10,6 +10,7 @@ const uk = {
 	},
 	ERRORS: {
 		UNKNOWN: 'Сталася невідома помилка!',
+		AEXIST: '{name} already exist.',
 	},
 	SHARED: {
 		NO_COMMAND_DESCRIPTION: 'Опис відсутній.',
@@ -50,6 +51,31 @@ const uk = {
 				BETWEEN: 'Between {var1} and {var2}',
 				UNKNOWN: 'Unknown',
 				UNAVAILABLE: 'Currently Unavailable.',
+			},
+		},
+		EDIT: {
+			DESCRIPTION: 'Edit an existing game.',
+			OPTIONS: {
+				NAME: {
+					NAME: 'name',
+					DESCRIPTION: 'The name of the game to be edited.',
+				},
+				NEWNAME: {
+					NAME: 'newname',
+					DESCRIPTION: 'The new name of the game.',
+				},
+				OWNER: {
+					NAME: 'owner',
+					DESCRIPTION: 'The owner of the game.',
+				},
+				TIMEMIN: {
+					NAME: 'timemin',
+					DESCRIPTION: 'The expected play time minimum.',
+				},
+				TIMEMAX: {
+					NAME: 'timemax',
+					DESCRIPTION: 'The expected play time maximum.',
+				},
 			},
 		},
 		STATS: {
