@@ -41,6 +41,7 @@ export default class RefreshCommand {
 			games_list.forEach(async (game:GameType) =>
 				await this.refreshGame({ client, interaction, game, locale: localize, channel })
 			)
+			this.db.get(Game).saveAllEntries()
 			interaction.followUp({
 				content: 'Games refreshed'
 			})

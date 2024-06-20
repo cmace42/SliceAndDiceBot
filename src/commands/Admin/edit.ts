@@ -70,6 +70,7 @@ export default class EditCommand {
 			if (timemax)
 				gameData.timemax = timemax
 			await gameRepo.persistAndFlush(gameData)
+			gameRepo.saveAllEntries()
 			const embed = await GameEmbed({game:gameData, locale:localize})
 			const channel = await client.channels.fetch("1103703411985227917");
 			if (!channel || !(channel instanceof TextChannel)) {

@@ -3,7 +3,7 @@ import { Client } from 'discordx'
 
 import { generalConfig } from '@/configs'
 import { Discord, Injectable, Once, Schedule } from '@/decorators'
-import { Data } from '@/entities'
+import { Data, Game } from '@/entities'
 import { Database, Logger, Scheduler, Store } from '@/services'
 import { resolveDependency, syncAllGuilds } from '@/utils/functions'
 
@@ -39,6 +39,9 @@ export default class ReadyEvent {
 
 		// update last startup time in the database
 		await this.db.get(Data).set('lastStartup', Date.now())
+
+		// create file of gamedata if not already done
+		this.db.get(Game).saveAllEntries()
 
 		// start scheduled jobs
 		this.scheduler.startAllJobs()
