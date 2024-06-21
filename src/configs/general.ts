@@ -8,7 +8,7 @@ export const generalConfig: GeneralConfigType = {
 	ownerId: env?.BOT_OWNER_ID,
 	timezone: 'Europe/Paris', // default TimeZone to well format and localize dates (logs, stats, etc)
 
-	simpleCommandsPrefix: '!', // default prefix for simple command messages (old way to do commands on discord)
+	simpleCommandsPrefix: '/', // default prefix for simple command messages (old way to do commands on discord)
 	automaticDeferring: true, // enable or not the automatic deferring of the replies of the bot on the command interactions
 
 	// useful links
@@ -25,11 +25,11 @@ export const generalConfig: GeneralConfigType = {
 	// define the bot activities (phrases under its name). Types can be: PLAYING, LISTENING, WATCHING, STREAMING
 	activities: [
 		{
-			text: 'Starting a twilight imperium game',
+			text: 'setup a twilight imperium game',
 			type: 'PLAYING',
 		},
 		{
-			text: 'Still playing twilight imperium',
+			text: 'twilight imperium',
 			type: 'PLAYING',
 		},
 		{

@@ -76,6 +76,18 @@ const fr = {
 					NAME: 'tempsmax',
 					DESCRIPTION: 'Le temps de jeu maximum.',
 				},
+				NBRMIN: {
+					NAME: 'nbrmin',
+					DESCRIPTION: 'Le nombre minimum de joueurs.',
+				},
+				NBRMAX: {
+					NAME: 'nbrmax',
+					DESCRIPTION: 'Le nombre maximum de joueurs.',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'La description du jeu.',
+				},
 			},
 		},
 		STATS: {

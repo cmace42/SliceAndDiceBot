@@ -12,28 +12,23 @@ import { AlreadyExistError, UnknownReplyError } from '@/errors'
 @Discord()
 @Injectable()
 @Category('Admin')
-export default class EditCommand {
+export default class AddCommand {
 
 	constructor(
 		private db: Database
 	) {}
 
-	@Slash({ name: 'edit' })
+	@Slash({ name: 'add' })
 	@Guard(
 		UserPermissions(['Administrator'])
 	)
-	async edit(
+	async add(
 		@SlashOption({
 			name: 'name',
 			localizationSource: 'COMMANDS.EDIT.OPTIONS.NAME',
 			required: true,
 			type: ApplicationCommandOptionType.String,
 		}) curname: string,
-		@SlashOption({
-			name: 'newname',
-			localizationSource: 'COMMANDS.EDIT.OPTIONS.NEWNAME',
-			type: ApplicationCommandOptionType.String,
-		}) newname: string | undefined,
 		@SlashOption({
 			name: 'owner',
 			localizationSource: 'COMMANDS.EDIT.OPTIONS.OWNER',
@@ -50,6 +45,16 @@ export default class EditCommand {
 			type: ApplicationCommandOptionType.Number,
 		}) timemax: number | undefined,
 		@SlashOption({
+			name: 'nbrmin',
+			localizationSource: 'COMMANDS.EDIT.OPTIONS.NBRMIN',
+			type: ApplicationCommandOptionType.Number,
+		}) nbrmin: number | undefined,
+		@SlashOption({
+			name: 'nbrmax',
+			localizationSource: 'COMMANDS.EDIT.OPTIONS.NBRMAX',
+			type: ApplicationCommandOptionType.Number,
+		}) nbrmax: number | undefined,
+		@SlashOption({
 			name: 'description',
 			localizationSource: 'COMMANDS.EDIT.OPTIONS.DESCRIPTION',
 			type: ApplicationCommandOptionType.String,
@@ -59,25 +64,24 @@ export default class EditCommand {
 			{ localize }: InteractionData
 	) {
 		const gameRepo = this.db.get(Game)
-		const gameData = await gameRepo.findOne({ name: curname})
+		let gameData = await gameRepo.findOne({ name: curname})
 		if (gameData && gameData.messageID) {
-			if (newname) {
-				if (await gameRepo.findOne({name : newname})) {
-					throw new AlreadyExistError(interaction, newname)
-				} else {
-					gameData.name = newname
-				}
-			}
+			throw new AlreadyExistError(interaction, curname)
+		} else {
+			gameData = new Game()
+			gameData.name = curname
 			if (proprio)
 				gameData.proprio = proprio
 			if (timemin)
 				gameData.timemin = timemin
 			if (timemax)
 				gameData.timemax = timemax
+			if (nbrmax)
+				gameData.nbrmax = nbrmax
+			if (nbrmin)
+				gameData.nbrmin = nbrmin
 			if (description)
 				gameData.description = description
-			await gameRepo.persistAndFlush(gameData)
-			gameRepo.saveAllEntries()
 			const embed = await GameEmbed({game:gameData, locale:localize})
 			const channel = await client.channels.fetch("1103703411985227917");
 			if (!channel || !(channel instanceof TextChannel)) {
@@ -86,12 +90,19 @@ export default class EditCommand {
 				})
 				return ;
 			}
-			await channel.messages.edit(gameData.messageID, {embeds:[embed]})
+			let message = await channel.send({embeds:[embed]})
+			await message.react('❤')
+			.then(() => {if (gameData?.jdr) message.react('🤹')
+				message.react('🧑‍🏫')
+			.then(() => message.react('🧑‍🎓')
+			.then(() => message.react('🤓')
+			.then(() => message.react('👀'))))})
+			gameData.messageID = message.id
+			await gameRepo.persistAndFlush(gameData)
+			gameRepo.saveAllEntries()
 			simpleSuccessEmbed(
-				interaction, "Game successfully updated."
+				interaction, "Game successfully added."
 			)
-		} else {
-			throw new UnknownReplyError(interaction)
 		}
 	}
 

@@ -48,9 +48,6 @@ export class Game extends CustomBaseEntity {
 	@Unique()
 	messageID: string
 
-	@Property()
-	lastInteract: Date = new Date()
-
 }
 
 // ===========================================
@@ -59,21 +56,13 @@ export class Game extends CustomBaseEntity {
 
 export class GameRepository extends EntityRepository<Game> {
 
-	async updateLastInteract(userId?: string): Promise<void> {
-		const user = await this.findOne({ id: userId })
-
-		if (user) {
-			user.lastInteract = new Date()
-			await this.flush()
-		}
-	}
-
 	async saveAllEntries(filename: string = 'assets/files/save.json'): Promise<void> {
-		const games = await this.findAll({})
+		const games = await this.findAll()
 
 		if (games) {
 			const data = JSON.stringify(games, null, 2);
 			await fs.writeFile(filename, data);
 		}
 	}
+
 }

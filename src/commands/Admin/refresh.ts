@@ -6,9 +6,9 @@ import { TranslationFunctions } from 'src/i18n/i18n-types'
 import { Discord, Injectable, Slash } from '@/decorators'
 import { Guard, UserPermissions } from '@/guards'
 import { Database } from '@/services'
-import games_list from 'assets/files/update.json'
 import { Game } from '@/entities'
 import { GameType, GameEmbed } from '@/utils/functions'
+import games_list from '../../../assets/files/update.json';
 
 @Discord()
 @Injectable()

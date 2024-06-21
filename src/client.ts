@@ -1,5 +1,5 @@
 import { GatewayIntentBits, Partials } from 'discord.js'
-import { ClientOptions } from 'discordx'
+import { ClientOptions, Guild } from 'discordx'
 
 import { generalConfig, logsConfig } from '@/configs'
 import { env } from '@/env'
@@ -9,7 +9,7 @@ export function clientConfig(): ClientOptions {
 	return {
 
 		// to only use global commands (use @Guild for specific guild command), comment this line
-		botGuilds: env.NODE_ENV === 'development' ? [env.TEST_GUILD_ID] : undefined,
+		botGuilds: env.NODE_ENV === 'development' ? [env.TEST_GUILD_ID] : [env.BOT_GUILD_ID],
 
 		// discord intents
 		intents: [

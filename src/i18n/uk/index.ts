@@ -76,6 +76,18 @@ const uk = {
 					NAME: 'timemax',
 					DESCRIPTION: 'The expected play time maximum.',
 				},
+				NBRMIN: {
+					NAME: 'nbrmin',
+					DESCRIPTION: 'The minimum number of players.',
+				},
+				NBRMAX: {
+					NAME: 'nbrmax',
+					DESCRIPTION: 'The maximum number of players.',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'The description of the game.',
+				},
 			},
 		},
 		STATS: {

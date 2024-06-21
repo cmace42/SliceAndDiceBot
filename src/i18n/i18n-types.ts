@@ -201,6 +201,36 @@ type RootTranslation = {
 					 */
 					DESCRIPTION: string
 				}
+				NBRMIN: {
+					/**
+					 * n​b​r​m​i​n
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​m​i​n​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​l​a​y​e​r​s​.
+					 */
+					DESCRIPTION: string
+				}
+				NBRMAX: {
+					/**
+					 * n​b​r​m​a​x
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​n​u​m​b​e​r​ ​o​f​ ​p​l​a​y​e​r​s​.
+					 */
+					DESCRIPTION: string
+				}
+				DESCRIPTION: {
+					/**
+					 * d​e​s​c​r​i​p​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​d​e​s​c​r​i​p​t​i​o​n​ ​o​f​ ​t​h​e​ ​g​a​m​e​.
+					 */
+					DESCRIPTION: string
+				}
 			}
 		}
 		STATS: {
@@ -448,6 +478,36 @@ export type TranslationFunctions = {
 					NAME: () => LocalizedString
 					/**
 					 * The expected play time maximum.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NBRMIN: {
+					/**
+					 * nbrmin
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The minimum number of players.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NBRMAX: {
+					/**
+					 * nbrmax
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The maximum number of players.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DESCRIPTION: {
+					/**
+					 * description
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The description of the game.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
