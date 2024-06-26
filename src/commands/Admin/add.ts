@@ -3,7 +3,7 @@ import { ApplicationCommandOptionType, CommandInteraction, TextChannel} from 'di
 import { Client } from 'discordx'
 
 import { Discord, Injectable, Slash, SlashOption } from '@/decorators'
-import { Guard, UserPermissions } from '@/guards'
+import { Guard, HasRole, UserPermissions } from '@/guards'
 import { Database } from '@/services'
 import {  GameType, GameEmbed, simpleSuccessEmbed } from '@/utils/functions'
 import { Game } from '@/entities'
@@ -20,7 +20,7 @@ export default class AddCommand {
 
 	@Slash({ name: 'add' })
 	@Guard(
-		UserPermissions(['Administrator'])
+		HasRole("Orga")
 	)
 	async add(
 		@SlashOption({
@@ -70,6 +70,7 @@ export default class AddCommand {
 		} else {
 			gameData = new Game()
 			gameData.name = curname
+			gameData.available = true
 			if (proprio)
 				gameData.proprio = proprio
 			if (timemin)
@@ -82,6 +83,8 @@ export default class AddCommand {
 				gameData.nbrmin = nbrmin
 			if (description)
 				gameData.description = description
+			gameRepo.persist(gameData)
+
 			const embed = await GameEmbed({game:gameData, locale:localize})
 			const channel = await client.channels.fetch("1103703411985227917");
 			if (!channel || !(channel instanceof TextChannel)) {
@@ -98,7 +101,7 @@ export default class AddCommand {
 			.then(() => message.react('🤓')
 			.then(() => message.react('👀'))))})
 			gameData.messageID = message.id
-			await gameRepo.persistAndFlush(gameData)
+			gameRepo.persist(gameData)
 			gameRepo.saveAllEntries()
 			simpleSuccessEmbed(
 				interaction, "Game successfully added."

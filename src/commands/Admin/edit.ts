@@ -1,9 +1,9 @@
 import { Category } from '@discordx/utilities'
-import { ApplicationCommandOptionType, CommandInteraction, TextChannel} from 'discord.js'
+import { ApplicationCommandOptionType, CommandInteraction, TextChannel, GuildMember} from 'discord.js'
 import { Client } from 'discordx'
 
 import { Discord, Injectable, Slash, SlashOption } from '@/decorators'
-import { Guard, UserPermissions } from '@/guards'
+import { Guard, HasRole } from '@/guards'
 import { Database } from '@/services'
 import {  GameType, GameEmbed, simpleSuccessEmbed } from '@/utils/functions'
 import { Game } from '@/entities'
@@ -20,7 +20,7 @@ export default class EditCommand {
 
 	@Slash({ name: 'edit' })
 	@Guard(
-		UserPermissions(['Administrator'])
+		HasRole("Orga")
 	)
 	async edit(
 		@SlashOption({
@@ -54,6 +54,11 @@ export default class EditCommand {
 			localizationSource: 'COMMANDS.EDIT.OPTIONS.DESCRIPTION',
 			type: ApplicationCommandOptionType.String,
 		}) description: string | undefined,
+		@SlashOption({
+			name: 'available',
+			localizationSource: 'COMMANDS.EDIT.OPTIONS.AVAILABLE',
+			type: ApplicationCommandOptionType.Boolean,
+		}) available: boolean | undefined,
 			interaction: CommandInteraction,
 			client: Client,
 			{ localize }: InteractionData
@@ -76,6 +81,9 @@ export default class EditCommand {
 				gameData.timemax = timemax
 			if (description)
 				gameData.description = description
+			if (available)
+				gameData.available = available
+			console.log(gameData)
 			await gameRepo.persistAndFlush(gameData)
 			gameRepo.saveAllEntries()
 			const embed = await GameEmbed({game:gameData, locale:localize})

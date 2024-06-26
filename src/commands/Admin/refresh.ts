@@ -8,7 +8,7 @@ import { Guard, UserPermissions } from '@/guards'
 import { Database } from '@/services'
 import { Game } from '@/entities'
 import { GameType, GameEmbed } from '@/utils/functions'
-import games_list from '../../../assets/files/update.json';
+import games_list from '../../../assets/files/saveid.json';
 
 @Discord()
 @Injectable()
@@ -37,10 +37,18 @@ export default class RefreshCommand {
 			})
 			return ;
 		}
+		const totalGames = games_list.length;
+		let processedGames = 0;
 		try {
-			games_list.forEach(async (game:GameType) =>
+			// Use Promise.all to wait for all refreshGame promises to resolve
+			await Promise.all(games_list.map(async (game) => {
 				await this.refreshGame({ client, interaction, game, locale: localize, channel })
-			)
+				processedGames++
+				await interaction.editReply({
+					content: `Games refreshed: ${processedGames}/${totalGames}`
+				})
+			}));
+			console.log("Saving all games in file")
 			this.db.get(Game).saveAllEntries()
 			interaction.followUp({
 				content: 'Games refreshed'
@@ -67,7 +75,14 @@ export default class RefreshCommand {
 		console.log(game)
 		if (!gamedata)
 			gamedata = new Game() // inserting new game
-		if (!gamedata.messageID) { // create new message
+		if (gamedata.messageID) { // edit existing message
+			await channel.messages.edit(gamedata.messageID, {embeds:[embed]})
+		} else if (game.messageID) { // edit existing message
+			await channel.messages.edit(game.messageID, {embeds:[embed]})
+		} else { // create new message
+			console.log(gamedata)
+			console.log(game)
+			/*
 			let message = await channel.send({embeds:[embed]})
 			await message.react('❤')
 			.then(() => {if (game.jdr) message.react('🤹')
@@ -76,12 +91,12 @@ export default class RefreshCommand {
 			.then(() => message.react('🤓')
 			.then(() => message.react('👀'))))})
 			gamedata.messageID = message.id
-		} else { // edit existing message
-			await channel.messages.edit(gamedata.messageID, {embeds:[embed]})
+			*/
 		}
 		Object.assign(gamedata, game)
-		await this.db.get(Game).persistAndFlush(gamedata)
-		console.log(gamedata)
+		console.log("Saving game")
+		this.db.get(Game).persist(gamedata)
+		//console.log(gamedata)
 		//await delay(1000)
 	}
 

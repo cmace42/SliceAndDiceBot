@@ -13,7 +13,8 @@ export type GameType = {
 	nbrmax: number | null,
 	description: string | null,
 	available: boolean | null,
-	jdr: boolean | null
+	jdr: boolean | null,
+	messageID: string | null
 }
 
 /**
@@ -75,7 +76,7 @@ export async function GameEmbed({ game, locale }: {
 	 */
 	fields.push({
 			name: locale.COMMANDS.REFRESH.EMBED.OWNER(),
-			value: `\`${game.proprio || locale.COMMANDS.REFRESH.EMBED.UNKNOWN()}\``,
+			value: game.proprio || locale.COMMANDS.REFRESH.EMBED.UNKNOWN(),
 			inline: true,
 	})
 	/**

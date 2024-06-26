@@ -88,6 +88,10 @@ const fr = {
 					NAME: 'description',
 					DESCRIPTION: 'La description du jeu.',
 				},
+				AVAILABLE: {
+					NAME: 'disponibilité',
+					DESCRIPTION: 'Le jeu est-il actuellement à 42 ?',
+				},
 			},
 		},
 		STATS: {

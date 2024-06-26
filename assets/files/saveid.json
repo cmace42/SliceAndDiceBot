@@ -1,38 +1,5 @@
 [
   {
-    "id": 1,
-    "createdAt": "2024-06-24T17:20:07.981Z",
-    "updatedAt": "2024-06-25T09:19:36.246Z",
-    "name": "Unmatched: Cobble and Fog",
-    "proprio": "<@317280557216301056>",
-    "description": "Chacun un personnage et un deck asymétrique pour un grand duel de cartes, assez simple à prendre en main",
-    "timemin": 30,
-    "timemax": 50,
-    "nbrmin": 2,
-    "nbrmax": 4,
-    "available": true,
-    "jdr": true,
-    "messageID": "1254848555227676682"
-  },
-  {
-    "id": 2,
-    "createdAt": "2024-06-24T18:00:55.642Z",
-    "updatedAt": "2024-06-25T09:20:21.204Z",
-    "name": "Galérapagos",
-    "proprio": "<@165944063655149568>",
-    "description": "Missing description.",
-    "timemin": null,
-    "timemax": null,
-    "nbrmin": null,
-    "nbrmax": null,
-    "available": true,
-    "jdr": true,
-    "messageID": "1254858816034439221"
-  },
-  {
-    "id": 3,
-    "createdAt": "2024-06-26T14:39:11.116Z",
-    "updatedAt": "2024-06-26T14:39:11.116Z",
     "name": "Abyss",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, Exploration, achats de ressources et de points de victoire",
@@ -45,9 +12,6 @@
     "messageID": "1235537505034567730"
   },
   {
-    "id": 4,
-    "createdAt": "2024-06-26T14:39:11.126Z",
-    "updatedAt": "2024-06-26T14:39:11.126Z",
     "name": "Abyss Kraken",
     "proprio": "<@171367593670737921>",
     "description": "DLC de Abyss avec nouvelle façon de gagner des points",
@@ -60,9 +24,6 @@
     "messageID": "1235537506078822462"
   },
   {
-    "id": 5,
-    "createdAt": "2024-06-26T14:39:11.129Z",
-    "updatedAt": "2024-06-26T14:39:11.130Z",
     "name": "Abyss Léviathan",
     "proprio": "<@171367593670737921>",
     "description": "DLC de Abyss avec nouvelle façon de gagner des points",
@@ -75,9 +36,6 @@
     "messageID": "1235537541914955797"
   },
   {
-    "id": 6,
-    "createdAt": "2024-06-26T14:39:11.133Z",
-    "updatedAt": "2024-06-26T14:39:11.133Z",
     "name": "Adrénaline",
     "proprio": "<@171367593670737921>",
     "description": "FPS sur plateau, kill or be killed",
@@ -90,9 +48,6 @@
     "messageID": "1235537543555186799"
   },
   {
-    "id": 7,
-    "createdAt": "2024-06-26T14:39:11.137Z",
-    "updatedAt": "2024-06-26T14:39:11.137Z",
     "name": "Age of War",
     "proprio": "asso",
     "description": "Hasard, Stratégie, Obtenez ou volez des points selon vos lancer de dés",
@@ -105,9 +60,6 @@
     "messageID": "1235537544653963286"
   },
   {
-    "id": 8,
-    "createdAt": "2024-06-26T14:39:11.139Z",
-    "updatedAt": "2024-06-26T14:39:11.139Z",
     "name": "Archipelago",
     "proprio": "<@171367593670737921>",
     "description": "Exploration, Gestion, Coopératif",
@@ -120,11 +72,8 @@
     "messageID": "1235537589612843028"
   },
   {
-    "id": 9,
-    "createdAt": "2024-06-26T14:39:11.141Z",
-    "updatedAt": "2024-06-26T16:13:38.622Z",
     "name": "Bang!",
-    "proprio": "<@133378518456336385>",
+    "proprio": "gbonnard",
     "description": "Statégie et secrets, tuez avant de vous faire tuer",
     "timemin": 15,
     "timemax": 40,
@@ -135,9 +84,6 @@
     "messageID": "1235537591005089903"
   },
   {
-    "id": 10,
-    "createdAt": "2024-06-26T14:39:11.146Z",
-    "updatedAt": "2024-06-26T14:39:11.146Z",
     "name": "Black Rose Wars",
     "proprio": "<@171367593670737921>",
     "description": "Deckbuilding, Magie fantastique, contrôle de lieux et duels de sorciers",
@@ -150,9 +96,6 @@
     "messageID": "1235537592402051123"
   },
   {
-    "id": 11,
-    "createdAt": "2024-06-26T14:39:11.148Z",
-    "updatedAt": "2024-06-26T14:39:11.148Z",
     "name": "Bloodlust",
     "proprio": null,
     "description": "livre JDR",
@@ -165,9 +108,6 @@
     "messageID": "1235537662555848776"
   },
   {
-    "id": 12,
-    "createdAt": "2024-06-26T14:39:11.153Z",
-    "updatedAt": "2024-06-26T14:39:11.153Z",
     "name": "Brass: Lancashire Deluxe",
     "proprio": "<@171367593670737921>",
     "description": "Gestion, Startégie, simulation économique sur fond de révolution industrielle",
@@ -180,9 +120,6 @@
     "messageID": "1235537691932889151"
   },
   {
-    "id": 13,
-    "createdAt": "2024-06-26T14:39:11.156Z",
-    "updatedAt": "2024-06-26T14:39:11.157Z",
     "name": "Civilization : Une Aube Nouvelle",
     "proprio": "<@171367593670737921>",
     "description": "Gestion, Stratégie, développez votre civilisation et vos technologies plus vite que vos adversaires",
@@ -195,9 +132,6 @@
     "messageID": "1235537693778251837"
   },
   {
-    "id": 14,
-    "createdAt": "2024-06-26T14:39:11.159Z",
-    "updatedAt": "2024-06-26T14:39:11.160Z",
     "name": "Civilisation : gloire et fortune",
     "proprio": "asso",
     "description": "DLC de civilisation",
@@ -210,9 +144,6 @@
     "messageID": "1235537742910193686"
   },
   {
-    "id": 15,
-    "createdAt": "2024-06-26T14:39:11.163Z",
-    "updatedAt": "2024-06-26T14:39:11.163Z",
     "name": "Clank!",
     "proprio": "<@171367593670737921>",
     "description": "Deckbuilding, récupérez un bon artifact et laissez les autres se faire tuer par le monstre des lieux",
@@ -225,9 +156,6 @@
     "messageID": "1235537744416215101"
   },
   {
-    "id": 16,
-    "createdAt": "2024-06-26T14:39:11.168Z",
-    "updatedAt": "2024-06-26T14:39:11.168Z",
     "name": "Clank! dans l'espace",
     "proprio": "<@171367593670737921>",
     "description": "Deckbuilding, récupérez un bon artifact et laissez les autres se faire tuer par le monstre des lieux mais dans l'espace",
@@ -240,9 +168,6 @@
     "messageID": "1235537745657466941"
   },
   {
-    "id": 17,
-    "createdAt": "2024-06-26T14:39:11.172Z",
-    "updatedAt": "2024-06-26T14:39:11.172Z",
     "name": "Code names",
     "proprio": "<@171367593670737921>",
     "description": "Party game, Devinez ce que votre équipiez veux vous faire comprendre avec un seul mot",
@@ -255,9 +180,6 @@
     "messageID": "1235537764410458162"
   },
   {
-    "id": 18,
-    "createdAt": "2024-06-26T14:39:11.174Z",
-    "updatedAt": "2024-06-26T14:39:11.175Z",
     "name": "Coimbra",
     "proprio": "<@171367593670737921>",
     "description": "Gestion, Stratégie, au portugal en plein développement",
@@ -270,9 +192,6 @@
     "messageID": "1235537772064935946"
   },
   {
-    "id": 19,
-    "createdAt": "2024-06-26T14:39:11.179Z",
-    "updatedAt": "2024-06-26T14:39:11.179Z",
     "name": "Concept",
     "proprio": "asso",
     "description": "Deduction, Party game",
@@ -285,9 +204,6 @@
     "messageID": "1235537773000130608"
   },
   {
-    "id": 20,
-    "createdAt": "2024-06-26T14:39:11.182Z",
-    "updatedAt": "2024-06-26T14:39:11.182Z",
     "name": "Concordia",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, Cartes, gestion et développement",
@@ -300,9 +216,6 @@
     "messageID": "1235537774627655721"
   },
   {
-    "id": 21,
-    "createdAt": "2024-06-26T14:39:11.186Z",
-    "updatedAt": "2024-06-26T14:39:11.187Z",
     "name": "Cranium black",
     "proprio": "<@487226921088974850>",
     "description": "Relevez les défis et gagner des points de plusieurs façons : mime, dessin, chanson, jeux de mots, modelage",
@@ -315,9 +228,6 @@
     "messageID": "1235537816814096404"
   },
   {
-    "id": 22,
-    "createdAt": "2024-06-26T14:39:11.189Z",
-    "updatedAt": "2024-06-26T14:39:11.189Z",
     "name": "Crypt",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, Hasard, prenez des risques pour les artefacts que vous voulez",
@@ -330,9 +240,6 @@
     "messageID": "1235537818772836383"
   },
   {
-    "id": 23,
-    "createdAt": "2024-06-26T14:39:11.191Z",
-    "updatedAt": "2024-06-26T14:39:11.191Z",
     "name": "Cryptide",
     "proprio": "rgarrigo",
     "description": "Déduction, Stratégie, chacun un indice, devinez celui des autres avant qu'ils devinent le vôtre",
@@ -345,9 +252,6 @@
     "messageID": "1235537820144373821"
   },
   {
-    "id": 24,
-    "createdAt": "2024-06-26T14:39:11.195Z",
-    "updatedAt": "2024-06-26T14:39:11.195Z",
     "name": "D&D main quest",
     "proprio": null,
     "description": "livre JDR",
@@ -360,9 +264,6 @@
     "messageID": "1235537869582499863"
   },
   {
-    "id": 25,
-    "createdAt": "2024-06-26T14:39:11.199Z",
-    "updatedAt": "2024-06-26T14:39:11.199Z",
     "name": "Der Herr des Eisgartens (Lord of the Ice Garden)",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, 4x",
@@ -375,9 +276,6 @@
     "messageID": "1235537871645966338"
   },
   {
-    "id": 26,
-    "createdAt": "2024-06-26T14:39:11.202Z",
-    "updatedAt": "2024-06-26T14:39:11.202Z",
     "name": "Descent V2",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie",
@@ -390,9 +288,6 @@
     "messageID": "1235537873193668639"
   },
   {
-    "id": 27,
-    "createdAt": "2024-06-26T14:39:11.206Z",
-    "updatedAt": "2024-06-26T14:39:11.206Z",
     "name": "Diamant",
     "proprio": null,
     "description": "Exploration",
@@ -405,9 +300,6 @@
     "messageID": "1235537898351099956"
   },
   {
-    "id": 28,
-    "createdAt": "2024-06-26T14:39:11.208Z",
-    "updatedAt": "2024-06-26T14:39:11.208Z",
     "name": "Eclipse",
     "proprio": "<@171367593670737921>",
     "description": "conquête intergalactique à base de technologies et de vaisseaux modulaires",
@@ -420,9 +312,6 @@
     "messageID": "1235537967054065694"
   },
   {
-    "id": 29,
-    "createdAt": "2024-06-26T14:39:11.211Z",
-    "updatedAt": "2024-06-26T14:39:11.211Z",
     "name": "Project Seeders: Exodus",
     "proprio": "<@171367593670737921>",
     "description": "stratégie et adaptation, sur fond de politique spatial",
@@ -435,9 +324,6 @@
     "messageID": "1235537978185613362"
   },
   {
-    "id": 30,
-    "createdAt": "2024-06-26T14:39:11.213Z",
-    "updatedAt": "2024-06-26T14:39:11.213Z",
     "name": "Five Tribes",
     "proprio": "esuits",
     "description": "Gestion, Stratégie",
@@ -450,9 +336,6 @@
     "messageID": "1235537979653492808"
   },
   {
-    "id": 31,
-    "createdAt": "2024-06-26T14:39:11.231Z",
-    "updatedAt": "2024-06-26T14:39:11.231Z",
     "name": "Forbidden Stars",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie",
@@ -465,9 +348,6 @@
     "messageID": "1235537980899328064"
   },
   {
-    "id": 32,
-    "createdAt": "2024-06-26T14:39:11.234Z",
-    "updatedAt": "2024-06-26T14:39:11.234Z",
     "name": "Haute tension",
     "proprio": "<@171367593670737921>",
     "description": "Gestion",
@@ -480,9 +360,6 @@
     "messageID": "1235538032837525505"
   },
   {
-    "id": 33,
-    "createdAt": "2024-06-26T14:39:11.238Z",
-    "updatedAt": "2024-06-26T14:39:11.239Z",
     "name": "Héros & Dragons",
     "proprio": null,
     "description": "JDR",
@@ -495,11 +372,8 @@
     "messageID": "1235538034225578065"
   },
   {
-    "id": 34,
-    "createdAt": "2024-06-26T14:39:11.242Z",
-    "updatedAt": "2024-06-26T15:32:41.699Z",
     "name": "Hnefatafl",
-    "proprio": "<@359040829953802240>",
+    "proprio": null,
     "description": "échecs norvégiens",
     "timemin": 15,
     "timemax": 30,
@@ -510,9 +384,6 @@
     "messageID": "1235538035794378825"
   },
   {
-    "id": 35,
-    "createdAt": "2024-06-26T14:39:11.246Z",
-    "updatedAt": "2024-06-26T14:39:11.246Z",
     "name": "Inside Job",
     "proprio": null,
     "description": "Cartes, Stratégie, Espion, Jeu de plis et missions avec trahison",
@@ -525,9 +396,6 @@
     "messageID": "1235538049325334560"
   },
   {
-    "id": 36,
-    "createdAt": "2024-06-26T14:39:11.248Z",
-    "updatedAt": "2024-06-26T14:39:11.248Z",
     "name": "Jeu d'échec",
     "proprio": null,
     "description": "Classique, Manque un pion noir",
@@ -540,9 +408,6 @@
     "messageID": "1235538050679963761"
   },
   {
-    "id": 37,
-    "createdAt": "2024-06-26T14:39:11.251Z",
-    "updatedAt": "2024-06-26T14:39:11.252Z",
     "name": "Jeu de Tarot",
     "proprio": null,
     "description": "Classique",
@@ -555,9 +420,6 @@
     "messageID": "1235538052420599902"
   },
   {
-    "id": 38,
-    "createdAt": "2024-06-26T14:39:11.256Z",
-    "updatedAt": "2024-06-26T14:39:11.256Z",
     "name": "Kamakor",
     "proprio": "mguerrea",
     "description": "manque le jeu de base \"Gosu",
@@ -570,9 +432,6 @@
     "messageID": "1235538057768468491"
   },
   {
-    "id": 39,
-    "createdAt": "2024-06-26T14:39:11.259Z",
-    "updatedAt": "2024-06-26T14:39:11.259Z",
     "name": "L'île aux trésors",
     "proprio": "<@171367593670737921>",
     "description": "Exploration Déduction, Stratégie, une personne cache son trésor, les autres le cherche, qui sera le plus rapide",
@@ -585,9 +444,6 @@
     "messageID": "1235538060549161043"
   },
   {
-    "id": 40,
-    "createdAt": "2024-06-26T14:39:11.263Z",
-    "updatedAt": "2024-06-26T14:39:11.263Z",
     "name": "Le monde des ténèbres",
     "proprio": null,
     "description": "livre JDR",
@@ -600,9 +456,6 @@
     "messageID": "1235538068564475955"
   },
   {
-    "id": 41,
-    "createdAt": "2024-06-26T14:39:11.266Z",
-    "updatedAt": "2024-06-26T14:39:11.267Z",
     "name": "Les aventuriers du rail",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, reliez des villes avec vos wagons pour marquer des points",
@@ -615,9 +468,6 @@
     "messageID": "1235538075724152936"
   },
   {
-    "id": 42,
-    "createdAt": "2024-06-26T14:39:11.270Z",
-    "updatedAt": "2024-06-26T14:39:11.270Z",
     "name": "Metal Aventure",
     "proprio": null,
     "description": "livre JDR",
@@ -630,9 +480,6 @@
     "messageID": "1235538077414330388"
   },
   {
-    "id": 43,
-    "createdAt": "2024-06-26T14:39:11.274Z",
-    "updatedAt": "2024-06-26T14:39:11.274Z",
     "name": "Munchking",
     "proprio": "asso",
     "description": null,
@@ -645,9 +492,6 @@
     "messageID": "1235538078311911425"
   },
   {
-    "id": 44,
-    "createdAt": "2024-06-26T14:39:11.279Z",
-    "updatedAt": "2024-06-26T14:39:11.279Z",
     "name": "Munchking2",
     "proprio": "asso",
     "description": "DLC pour Munchking",
@@ -660,9 +504,6 @@
     "messageID": "1235538082921451601"
   },
   {
-    "id": 45,
-    "createdAt": "2024-06-26T14:39:11.282Z",
-    "updatedAt": "2024-06-26T14:39:11.282Z",
     "name": "MunchkingFull",
     "proprio": "motero",
     "description": "DLC pour Munchking",
@@ -675,9 +516,6 @@
     "messageID": "1235538084162965526"
   },
   {
-    "id": 46,
-    "createdAt": "2024-06-26T14:39:11.285Z",
-    "updatedAt": "2024-06-26T14:39:11.286Z",
     "name": "Mysterium",
     "proprio": null,
     "description": "Enquête, Coopératif, Chronométré",
@@ -690,9 +528,6 @@
     "messageID": "1235538085090164768"
   },
   {
-    "id": 47,
-    "createdAt": "2024-06-26T14:39:11.289Z",
-    "updatedAt": "2024-06-26T14:39:11.290Z",
     "name": "Ninja all stars",
     "proprio": "<@487226921088974850>",
     "description": "Les joueurs s’affrontent au cours de différentes épreuves.",
@@ -705,9 +540,6 @@
     "messageID": "1235538090089775114"
   },
   {
-    "id": 48,
-    "createdAt": "2024-06-26T14:39:11.293Z",
-    "updatedAt": "2024-06-26T14:39:11.294Z",
     "name": "Quantum",
     "proprio": "<@171367593670737921>",
     "description": "stratégie et de conquête épique dans lequel chacun de vos dés est un vaisseau spatial",
@@ -720,9 +552,6 @@
     "messageID": "1235538091184492645"
   },
   {
-    "id": 49,
-    "createdAt": "2024-06-26T14:39:11.297Z",
-    "updatedAt": "2024-06-26T14:39:11.297Z",
     "name": "Ra",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie et gestion",
@@ -735,9 +564,6 @@
     "messageID": "1235538137917292594"
   },
   {
-    "id": 50,
-    "createdAt": "2024-06-26T14:39:11.299Z",
-    "updatedAt": "2024-06-26T14:39:11.299Z",
     "name": "Ramsès",
     "proprio": "<@487226921088974850>",
     "description": "Jeu de réflexion",
@@ -750,9 +576,6 @@
     "messageID": "1235538139167064106"
   },
   {
-    "id": 51,
-    "createdAt": "2024-06-26T14:39:11.303Z",
-    "updatedAt": "2024-06-26T14:39:11.303Z",
     "name": "Secrets Lost Tomb",
     "proprio": "asso",
     "description": "Jeu coopératif d'aventure",
@@ -765,9 +588,6 @@
     "messageID": "1235538142405328896"
   },
   {
-    "id": 52,
-    "createdAt": "2024-06-26T14:39:11.307Z",
-    "updatedAt": "2024-06-26T14:39:11.307Z",
     "name": "Sherlock Holmes",
     "proprio": "<@487226921088974850>",
     "description": "Enquête coop",
@@ -780,9 +600,6 @@
     "messageID": "1235538145064255540"
   },
   {
-    "id": 53,
-    "createdAt": "2024-06-26T14:39:11.310Z",
-    "updatedAt": "2024-06-26T14:39:11.310Z",
     "name": "Skull",
     "proprio": "mguillon",
     "description": "Bluff et prise de risque vont de paire dans ce jeu rapide",
@@ -795,9 +612,6 @@
     "messageID": "1235538178140667974"
   },
   {
-    "id": 54,
-    "createdAt": "2024-06-26T14:39:11.314Z",
-    "updatedAt": "2024-06-26T14:39:11.314Z",
     "name": "Captain Sonar",
     "proprio": "asso",
     "description": "Communication en équipe est clef pour sortir vainqueur de cette bataille navale",
@@ -810,9 +624,6 @@
     "messageID": "1235538179486908427"
   },
   {
-    "id": 55,
-    "createdAt": "2024-06-26T14:39:11.316Z",
-    "updatedAt": "2024-06-26T14:39:11.316Z",
     "name": "Sushi Bar",
     "proprio": "<@171367593670737921>",
     "description": "Hasard, dés et combinaisons",
@@ -825,9 +636,6 @@
     "messageID": "1235538180640342067"
   },
   {
-    "id": 56,
-    "createdAt": "2024-06-26T14:39:11.319Z",
-    "updatedAt": "2024-06-26T14:39:11.319Z",
     "name": "Taboo XXL",
     "proprio": "<@487226921088974850>",
     "description": "Party game",
@@ -840,9 +648,6 @@
     "messageID": "1235538195844956181"
   },
   {
-    "id": 57,
-    "createdAt": "2024-06-26T14:39:11.322Z",
-    "updatedAt": "2024-06-26T14:39:11.322Z",
     "name": "Tainted Grail",
     "proprio": null,
     "description": "JDR",
@@ -855,9 +660,6 @@
     "messageID": "1235538197224886283"
   },
   {
-    "id": 58,
-    "createdAt": "2024-06-26T14:39:11.325Z",
-    "updatedAt": "2024-06-26T14:39:11.325Z",
     "name": "Terraforming mars",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, Draft, Tuiles et pouvoirs sur fond futuristique et SF",
@@ -870,9 +672,6 @@
     "messageID": "1235538199108124722"
   },
   {
-    "id": 59,
-    "createdAt": "2024-06-26T14:39:11.329Z",
-    "updatedAt": "2024-06-26T14:39:11.329Z",
     "name": "The 7th Continent",
     "proprio": null,
     "description": "Exploration, Survie, à la Jules Verne",
@@ -885,9 +684,6 @@
     "messageID": "1235538200152506420"
   },
   {
-    "id": 60,
-    "createdAt": "2024-06-26T14:39:11.331Z",
-    "updatedAt": "2024-06-26T14:39:11.331Z",
     "name": "The Manhattan Project",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie, gestion de ressources pour construire vos bombes avant vos adversaires",
@@ -900,9 +696,6 @@
     "messageID": "1235538202383876186"
   },
   {
-    "id": 61,
-    "createdAt": "2024-06-26T14:39:11.333Z",
-    "updatedAt": "2024-06-26T14:39:11.333Z",
     "name": "The résistance",
     "proprio": "<@171367593670737921>",
     "description": "Déduction, mensonges et trahisons",
@@ -915,9 +708,6 @@
     "messageID": "1235538209757335592"
   },
   {
-    "id": 62,
-    "createdAt": "2024-06-26T14:39:11.335Z",
-    "updatedAt": "2024-06-26T14:39:11.336Z",
     "name": "Twilight Imperium",
     "proprio": "<@171367593670737921>",
     "description": "Conquête et gestion de ressources, négociations et alliances entre civilisations intergalactiques",
@@ -930,9 +720,6 @@
     "messageID": "1235538252799283211"
   },
   {
-    "id": 63,
-    "createdAt": "2024-06-26T14:39:11.338Z",
-    "updatedAt": "2024-06-26T14:39:11.339Z",
     "name": "Tyrant of the underdark",
     "proprio": "<@171367593670737921>",
     "description": "Deckbuilding, conquête et alliances",
@@ -945,9 +732,6 @@
     "messageID": "1235538310525354098"
   },
   {
-    "id": 64,
-    "createdAt": "2024-06-26T14:39:11.340Z",
-    "updatedAt": "2024-06-26T14:39:11.340Z",
     "name": "Tzolk'in",
     "proprio": "<@171367593670737921>",
     "description": "Gestion et optimisation",
@@ -960,9 +744,6 @@
     "messageID": "1235538312127582249"
   },
   {
-    "id": 65,
-    "createdAt": "2024-06-26T14:39:11.342Z",
-    "updatedAt": "2024-06-26T14:39:11.342Z",
     "name": "Uno Deluxe",
     "proprio": "mprevot",
     "description": "Classique",
@@ -975,9 +756,6 @@
     "messageID": "1235538313633599518"
   },
   {
-    "id": 66,
-    "createdAt": "2024-06-26T14:39:11.344Z",
-    "updatedAt": "2024-06-26T14:39:11.344Z",
     "name": "When I dream",
     "proprio": null,
     "description": "Déduction et mémoire, Jeu sur les mots",
@@ -990,9 +768,6 @@
     "messageID": "1235538373565874196"
   },
   {
-    "id": 67,
-    "createdAt": "2024-06-26T14:39:11.345Z",
-    "updatedAt": "2024-06-26T14:39:11.345Z",
     "name": "Zombie 15",
     "proprio": null,
     "description": "Coop",
@@ -1005,9 +780,6 @@
     "messageID": "1235538375143067762"
   },
   {
-    "id": 68,
-    "createdAt": "2024-06-26T14:39:11.347Z",
-    "updatedAt": "2024-06-26T14:39:11.347Z",
     "name": "Loups-Garous",
     "proprio": null,
     "description": "Rôles et déduction",
@@ -1020,9 +792,6 @@
     "messageID": "1235538376380121201"
   },
   {
-    "id": 69,
-    "createdAt": "2024-06-26T14:39:11.348Z",
-    "updatedAt": "2024-06-26T14:39:11.348Z",
     "name": "Oui, Seigneur des ténèbres!",
     "proprio": null,
     "description": "JDR",
@@ -1035,9 +804,6 @@
     "messageID": "1235538389453901844"
   },
   {
-    "id": 70,
-    "createdAt": "2024-06-26T14:39:11.349Z",
-    "updatedAt": "2024-06-26T14:39:11.349Z",
     "name": "Oui, Seigneur des ténèbres!2",
     "proprio": null,
     "description": "JDR",
@@ -1050,9 +816,6 @@
     "messageID": "1235538391651717156"
   },
   {
-    "id": 71,
-    "createdAt": "2024-06-26T14:39:11.350Z",
-    "updatedAt": "2024-06-26T14:39:11.350Z",
     "name": "Sheriff of Nottingham",
     "proprio": "<@171367593670737921>",
     "description": "Bluff Négociation",
@@ -1065,9 +828,6 @@
     "messageID": "1235538393421709422"
   },
   {
-    "id": 72,
-    "createdAt": "2024-06-26T14:39:11.351Z",
-    "updatedAt": "2024-06-26T14:39:11.351Z",
     "name": "Crisis",
     "proprio": "<@171367593670737921>",
     "description": "Gestion Stratégie",
@@ -1080,9 +840,6 @@
     "messageID": "1235538394889719931"
   },
   {
-    "id": 73,
-    "createdAt": "2024-06-26T14:39:11.352Z",
-    "updatedAt": "2024-06-26T14:39:11.352Z",
     "name": "Ground Floor",
     "proprio": "<@171367593670737921>",
     "description": "Gestion Stratégie",
@@ -1095,9 +852,6 @@
     "messageID": "1235538398991749272"
   },
   {
-    "id": 74,
-    "createdAt": "2024-06-26T14:39:11.354Z",
-    "updatedAt": "2024-06-26T14:39:11.354Z",
     "name": "The great Zimbabwe",
     "proprio": "<@171367593670737921>",
     "description": "Gestion",
@@ -1110,9 +864,6 @@
     "messageID": "1235538400757547078"
   },
   {
-    "id": 75,
-    "createdAt": "2024-06-26T14:39:11.355Z",
-    "updatedAt": "2024-06-26T14:39:11.355Z",
     "name": "Lettres de Whitechapel",
     "proprio": "<@171367593670737921>",
     "description": "Bluff et déduction",
@@ -1125,9 +876,6 @@
     "messageID": "1235538401940213890"
   },
   {
-    "id": 76,
-    "createdAt": "2024-06-26T14:39:11.355Z",
-    "updatedAt": "2024-06-26T14:39:11.355Z",
     "name": "Chaos dans le vieux monde",
     "proprio": "<@171367593670737921>",
     "description": "Conquête",
@@ -1140,9 +888,6 @@
     "messageID": "1235538487604805735"
   },
   {
-    "id": 77,
-    "createdAt": "2024-06-26T14:39:11.356Z",
-    "updatedAt": "2024-06-26T14:39:11.356Z",
     "name": "Cry Hayoc",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie Combat",
@@ -1155,9 +900,6 @@
     "messageID": "1235538534841188404"
   },
   {
-    "id": 78,
-    "createdAt": "2024-06-26T14:39:11.356Z",
-    "updatedAt": "2024-06-26T14:39:11.356Z",
     "name": "Rolling Empires",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie Gestion",
@@ -1170,9 +912,6 @@
     "messageID": "1235538536233439242"
   },
   {
-    "id": 79,
-    "createdAt": "2024-06-26T14:39:11.356Z",
-    "updatedAt": "2024-06-26T14:39:11.356Z",
     "name": "Robin Hood",
     "proprio": "<@171367593670737921>",
     "description": "Semi-Coop médiéval",
@@ -1185,9 +924,6 @@
     "messageID": "1235538537487794186"
   },
   {
-    "id": 80,
-    "createdAt": "2024-06-26T14:39:11.357Z",
-    "updatedAt": "2024-06-26T14:39:11.357Z",
     "name": "Earth Reborn",
     "proprio": "<@171367593670737921>",
     "description": "Aventure scénarisée post apocalyptique",
@@ -1200,9 +936,6 @@
     "messageID": "1235538584031858729"
   },
   {
-    "id": 81,
-    "createdAt": "2024-06-26T14:39:11.357Z",
-    "updatedAt": "2024-06-26T14:39:11.357Z",
     "name": "Antiquity",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie",
@@ -1215,9 +948,6 @@
     "messageID": "1235538585403527178"
   },
   {
-    "id": 82,
-    "createdAt": "2024-06-26T14:39:11.358Z",
-    "updatedAt": "2024-06-26T14:39:11.358Z",
     "name": "Illusio",
     "proprio": null,
     "description": "Jeu de cartes, Magie",
@@ -1230,9 +960,6 @@
     "messageID": "1235538586812809277"
   },
   {
-    "id": 83,
-    "createdAt": "2024-06-26T14:39:11.359Z",
-    "updatedAt": "2024-06-26T14:39:11.359Z",
     "name": "Haos marauders",
     "proprio": null,
     "description": "Stratégie Combat",
@@ -1245,9 +972,6 @@
     "messageID": "1235538618911690824"
   },
   {
-    "id": 84,
-    "createdAt": "2024-06-26T14:39:11.360Z",
-    "updatedAt": "2024-06-26T14:39:11.360Z",
     "name": "The Orcfather",
     "proprio": "<@171367593670737921>",
     "description": "Bluff Stratégie",
@@ -1260,9 +984,6 @@
     "messageID": "1235538620069318706"
   },
   {
-    "id": 85,
-    "createdAt": "2024-06-26T14:39:11.361Z",
-    "updatedAt": "2024-06-26T14:39:11.361Z",
     "name": "Illusion",
     "proprio": null,
     "description": "Observation",
@@ -1275,9 +996,6 @@
     "messageID": "1235538621495251064"
   },
   {
-    "id": 86,
-    "createdAt": "2024-06-26T14:39:11.362Z",
-    "updatedAt": "2024-06-26T14:39:11.362Z",
     "name": "Gold digger",
     "proprio": null,
     "description": "Gestion Opportunisme",
@@ -1290,9 +1008,6 @@
     "messageID": "1235538622841884694"
   },
   {
-    "id": 87,
-    "createdAt": "2024-06-26T14:39:11.362Z",
-    "updatedAt": "2024-06-26T14:39:11.362Z",
     "name": "Blackout",
     "proprio": "<@171367593670737921>",
     "description": "Gestion",

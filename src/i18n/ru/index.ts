@@ -88,6 +88,10 @@ const ru = {
 					NAME: 'description',
 					DESCRIPTION: 'The description of the game.',
 				},
+				AVAILABLE: {
+					NAME: 'available',
+					DESCRIPTION: 'Is the game still at 42 ?',
+				},
 			},
 		},
 		STATS: {

@@ -7,7 +7,7 @@ class Migration20240502092433 extends Migration {
   async up() {
     this.addSql('create table `data` (`key` text not null, `created_at` datetime not null, `updated_at` datetime not null, `value` text not null default \'\', primary key (`key`));');
 
-    this.addSql('create table `game` (`id` integer not null primary key autoincrement, `created_at` datetime not null, `updated_at` datetime not null, `name` text not null, `proprio` text null default null, `description` text null default \'Missing description.\', `timemin` integer null default null, `timemax` integer null default null, `nbrmin` integer null default null, `nbrmax` integer null default null, `available` integer not null default true, `jdr` integer not null default true, `message_id` text null default null, `last_interact` datetime not null, unique (`id`));');
+    this.addSql('create table `game` (`id` integer not null primary key autoincrement, `created_at` datetime not null, `updated_at` datetime not null, `name` text not null, `proprio` text null default null, `description` text null default \'Missing description.\', `timemin` integer null default null, `timemax` integer null default null, `nbrmin` integer null default null, `nbrmax` integer null default null, `available` integer not null default true, `jdr` integer not null default true, `message_id` text null default null, unique (`id`));');
     this.addSql('create unique index `game_name_unique` on `game` (`name`);');
     this.addSql('create unique index `game_message_id_unique` on `game` (`message_id`);');
 

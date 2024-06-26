@@ -231,6 +231,16 @@ type RootTranslation = {
 					 */
 					DESCRIPTION: string
 				}
+				AVAILABLE: {
+					/**
+					 * a​v​a​i​l​a​b​l​e
+					 */
+					NAME: string
+					/**
+					 * I​s​ ​t​h​e​ ​g​a​m​e​ ​s​t​i​l​l​ ​a​t​ ​4​2​ ​?
+					 */
+					DESCRIPTION: string
+				}
 			}
 		}
 		STATS: {
@@ -508,6 +518,16 @@ export type TranslationFunctions = {
 					NAME: () => LocalizedString
 					/**
 					 * The description of the game.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				AVAILABLE: {
+					/**
+					 * available
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * Is the game still at 42 ?
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
