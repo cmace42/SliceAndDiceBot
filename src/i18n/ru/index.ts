@@ -94,6 +94,23 @@ const ru = {
 				},
 			},
 		},
+		SEARCH: {
+			DESCRIPTION: "Search for available games with the group's preferences.",
+			OPTIONS: {
+				TIMEMIN: {
+					NAME: 'timemin',
+					DESCRIPTION: 'The expected play time minimum.',
+				},
+				TIMEMAX: {
+					NAME: 'timemax',
+					DESCRIPTION: 'The expected play time maximum.',
+				},
+				NBR: {
+					NAME: 'nbr',
+					DESCRIPTION: 'The number of players.',
+				},
+			},
+		},
 		STATS: {
 			DESCRIPTION: 'Получить статистику по боту.',
 			HEADERS: {

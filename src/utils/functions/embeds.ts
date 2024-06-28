@@ -3,6 +3,9 @@ import { CommandInteraction, EmbedBuilder, EmbedField } from 'discord.js'
 import { replyToInteraction } from '@/utils/functions'
 import { TranslationFunctions } from 'src/i18n/i18n-types'
 import { getColor } from '@/utils/functions'
+import { Category, CategoryRepository } from '@/entities'
+
+const testCategoryChannel = 'https://discord.com/channels/1233081092416999515/1256159215332888617/';
 
 export type GameType = {
 	name: string,
@@ -105,4 +108,47 @@ export async function GameEmbed({ game, locale }: {
 	else
 		embed.setDescription(locale.COMMANDS.REFRESH.EMBED.UNAVAILABLE())
 	return embed
+}
+
+
+export async function CategoryEmbed({ category, locale, categoryRepo, isNew = false }: {
+    category: Category
+    locale: TranslationFunctions
+    categoryRepo: CategoryRepository
+	isNew: boolean
+}): Promise<EmbedBuilder> {
+    let descr = category.description || "Missing description."
+	if (isNew) {
+        descr += "\n\n" + locale.COMMANDS.REFRESH.EMBED.UNAVAILABLE();
+	} else {
+		const games: GameType[] = await categoryRepo.findAllGamesInCategory(category.id)
+		if (games.length === 0) {
+			descr += "\n\n" + locale.COMMANDS.REFRESH.EMBED.UNAVAILABLE();
+		} else {
+			const gameNames = games.map(game => game.name).join('\n');
+			descr += "\n\n" + gameNames;
+		}
+	}
+
+    const embed = new EmbedBuilder()
+        .setTitle(category.name)
+        .setColor(getColor('primary'))
+        .setDescription(descr.slice(0, 4096)) // Ensure description does not exceed 4096 characters
+
+    // Check if the category has a parent and add a field with a Discord link to the parent category's message
+    if (category.parent && category.parent.messageID) {
+        const parentCategoryLink = `${testCategoryChannel}${category.parent.messageID}`;
+        embed.addFields({ name: 'Parent Category', value: `[Go to Parent Category](${parentCategoryLink})`, inline: false });
+    }
+
+    // Example of adding children categories (assuming you have a way to get them)
+    // const childrenCategories: Category[] = await categoryRepo.findChildrenCategories(category.id);
+    // if (childrenCategories.length > 0) {
+    //     childrenCategories.forEach(child => {
+    //         const childCategoryLink = `${testCategoryChannel}${child.messageID}`;
+    //         embed.addFields({ name: child.name, value: `[Go to ${child.name}](${childCategoryLink})`, inline: true });
+    //     });
+    // }
+
+    return embed;
 }

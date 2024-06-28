@@ -1,5 +1,5 @@
 import { Category } from '@discordx/utilities'
-import { ApplicationCommandOptionType, CommandInteraction, ActionRowBuilder, ButtonBuilder, ButtonStyle, TextChannel, ButtonInteraction, EmbedBuilder} from 'discord.js'
+import { ApplicationCommandOptionType, CommandInteraction, EmbedBuilder} from 'discord.js'
 import { Client } from 'discordx'
 
 import { Discord, Injectable, Slash, SlashOption } from '@/decorators'
@@ -7,7 +7,6 @@ import { Guard, HasRole, UserPermissions } from '@/guards'
 import { Database } from '@/services'
 import {  GameType, GameEmbed, simpleSuccessEmbed, simpleErrorEmbed } from '@/utils/functions'
 import { Game } from '@/entities'
-import { AlreadyExistError, UnknownReplyError } from '@/errors'
 import { Pagination, PaginationType } from '@discordx/pagination'
 
 function chunkArray(arr: EmbedBuilder[], size: number): EmbedBuilder[][] {
@@ -35,17 +34,17 @@ export default class SearchCommand {
 		 */
 		@SlashOption({
 			name: 'timemin',
-			localizationSource: 'COMMANDS.EDIT.OPTIONS.TIMEMIN',
+			localizationSource: 'COMMANDS.SEARCH.OPTIONS.TIMEMIN',
 			type: ApplicationCommandOptionType.Number,
 		}) timemin: number | undefined,
 		@SlashOption({
 			name: 'timemax',
-			localizationSource: 'COMMANDS.EDIT.OPTIONS.TIMEMAX',
+			localizationSource: 'COMMANDS.SEARCH.OPTIONS.TIMEMAX',
 			type: ApplicationCommandOptionType.Number,
 		}) timemax: number | undefined,
 		@SlashOption({
 			name: 'nbr',
-			localizationSource: 'COMMANDS.EDIT.OPTIONS.NBRMIN',
+			localizationSource: 'COMMANDS.SEARCH.OPTIONS.NBR',
 			type: ApplicationCommandOptionType.Number,
 		}) nbr: number | undefined,
 			interaction: CommandInteraction,
@@ -86,7 +85,7 @@ export default class SearchCommand {
 					pages,
 					{
 						type: PaginationType.Button,
-						time: 60000,
+						time: 300000,
 					}
 				).send()
 			} else {

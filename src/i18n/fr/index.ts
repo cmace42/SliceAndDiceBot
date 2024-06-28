@@ -94,6 +94,23 @@ const fr = {
 				},
 			},
 		},
+		SEARCH: {
+			DESCRIPTION: 'Rechecher les jeux disponible suivant les préférences du groupe.',
+			OPTIONS: {
+				TIMEMIN: {
+					NAME: 'tempsmin',
+					DESCRIPTION: 'Le temps de jeu minimum.',
+				},
+				TIMEMAX: {
+					NAME: 'tempsmax',
+					DESCRIPTION: 'Le temps de jeu maximum.',
+				},
+				NBR: {
+					NAME: 'nbr',
+					DESCRIPTION: 'Le nombre de joueurs.',
+				},
+			},
+		},
 		STATS: {
 			DESCRIPTION: 'Obtiens des statistiques sur le bot.',
 			HEADERS: {

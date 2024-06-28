@@ -243,6 +243,44 @@ type RootTranslation = {
 				}
 			}
 		}
+		SEARCH: {
+			/**
+			 * S​e​a​r​c​h​ ​f​o​r​ ​a​v​a​i​l​a​b​l​e​ ​g​a​m​e​s​ ​w​i​t​h​ ​t​h​e​ ​g​r​o​u​p​'​s​ ​p​r​e​f​e​r​e​n​c​e​s​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				TIMEMIN: {
+					/**
+					 * t​i​m​e​m​i​n
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​i​n​i​m​u​m​.
+					 */
+					DESCRIPTION: string
+				}
+				TIMEMAX: {
+					/**
+					 * t​i​m​e​m​a​x
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​a​x​i​m​u​m​.
+					 */
+					DESCRIPTION: string
+				}
+				NBR: {
+					/**
+					 * n​b​r
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​l​a​y​e​r​s​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+		}
 		STATS: {
 			/**
 			 * G​e​t​ ​s​o​m​e​ ​s​t​a​t​s​ ​a​b​o​u​t​ ​t​h​e​ ​b​o​t​.
@@ -528,6 +566,44 @@ export type TranslationFunctions = {
 					NAME: () => LocalizedString
 					/**
 					 * Is the game still at 42 ?
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+		}
+		SEARCH: {
+			/**
+			 * Search for available games with the group's preferences.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				TIMEMIN: {
+					/**
+					 * timemin
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The expected play time minimum.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				TIMEMAX: {
+					/**
+					 * timemax
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The expected play time maximum.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				NBR: {
+					/**
+					 * nbr
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The number of players.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
