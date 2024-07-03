@@ -33,6 +33,10 @@ type RootTranslation = {
 		 * T​h​i​s​ ​c​o​m​m​a​n​d​ ​c​a​n​ ​o​n​l​y​ ​b​e​ ​u​s​e​d​ ​i​n​ ​a​ ​N​S​F​W​ ​c​h​a​n​n​e​l​.
 		 */
 		NSFW: string
+		/**
+		 * Y​o​u​ ​d​o​ ​n​o​t​ ​h​a​v​e​ ​t​h​e​ ​r​e​q​u​i​r​e​d​ ​r​o​l​e​ ​t​o​ ​u​s​e​ ​t​h​i​s​ ​c​o​m​m​a​n​d​.
+		 */
+		ROLE: string
 	}
 	ERRORS: {
 		/**
@@ -243,6 +247,68 @@ type RootTranslation = {
 				}
 			}
 		}
+		ADD_CATEGORY: {
+			/**
+			 * A​d​d​ ​a​ ​c​a​t​e​g​o​r​y​ ​f​o​r​ ​g​a​m​e​s​.
+			 */
+			DESCRIPTION: string
+			OPTIONS: {
+				NAME: {
+					/**
+					 * n​a​m​e
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​n​a​m​e​ ​o​f​ ​t​h​e​ ​c​a​t​e​g​o​r​y​ ​t​o​ ​a​d​d​.
+					 */
+					DESCRIPTION: string
+				}
+				PARENT_CATEGORY: {
+					/**
+					 * p​a​r​e​n​t​_​c​a​t​e​g​o​r​y
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​p​a​r​e​n​t​ ​c​a​t​e​g​o​r​y​ ​i​f​ ​t​h​e​r​e​ ​i​s​ ​o​n​e​.
+					 */
+					DESCRIPTION: string
+				}
+				DESCRIPTION: {
+					/**
+					 * d​e​s​c​r​i​p​t​i​o​n
+					 */
+					NAME: string
+					/**
+					 * A​ ​d​e​f​i​n​i​t​i​o​n​ ​o​f​ ​t​h​e​ ​c​a​t​e​g​o​r​y​ ​n​a​m​e​.
+					 */
+					DESCRIPTION: string
+				}
+			}
+			EMBED: {
+				/**
+				 * G​a​m​e​s
+				 */
+				GAMES: string
+				/**
+				 * P​a​r​e​n​t​ ​C​a​t​e​g​o​r​y
+				 */
+				PARENT: string
+				/**
+				 * C​h​i​l​d​r​e​n​ ​C​a​t​e​g​o​r​i​e​(​s​)
+				 */
+				CHILDREN: string
+				/**
+				 * [​G​o​ ​t​o​ ​{​n​a​m​e​}​]​(​{​l​i​n​k​}​)
+				 * @param {string} link
+				 * @param {string} name
+				 */
+				LINK: RequiredParams<'link' | 'name'>
+				/**
+				 * C​a​t​e​g​o​r​y​ ​s​u​c​c​e​s​s​f​u​l​l​y​ ​a​d​d​e​d​.
+				 */
+				DESCRIPTION: string
+			}
+		}
 		SEARCH: {
 			/**
 			 * S​e​a​r​c​h​ ​f​o​r​ ​a​v​a​i​l​a​b​l​e​ ​g​a​m​e​s​ ​w​i​t​h​ ​t​h​e​ ​g​r​o​u​p​'​s​ ​p​r​e​f​e​r​e​n​c​e​s​.
@@ -367,6 +433,10 @@ export type TranslationFunctions = {
 		 * This command can only be used in a NSFW channel.
 		 */
 		NSFW: () => LocalizedString
+		/**
+		 * You do not have the required role to use this command.
+		 */
+		ROLE: () => LocalizedString
 	}
 	ERRORS: {
 		/**
@@ -569,6 +639,66 @@ export type TranslationFunctions = {
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
+			}
+		}
+		ADD_CATEGORY: {
+			/**
+			 * Add a category for games.
+			 */
+			DESCRIPTION: () => LocalizedString
+			OPTIONS: {
+				NAME: {
+					/**
+					 * name
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The name of the category to add.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				PARENT_CATEGORY: {
+					/**
+					 * parent_category
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The parent category if there is one.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				DESCRIPTION: {
+					/**
+					 * description
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * A definition of the category name.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+			}
+			EMBED: {
+				/**
+				 * Games
+				 */
+				GAMES: () => LocalizedString
+				/**
+				 * Parent Category
+				 */
+				PARENT: () => LocalizedString
+				/**
+				 * Children Categorie(s)
+				 */
+				CHILDREN: () => LocalizedString
+				/**
+				 * [Go to {name}]({link})
+				 */
+				LINK: (arg: { link: string, name: string }) => LocalizedString
+				/**
+				 * Category successfully added.
+				 */
+				DESCRIPTION: () => LocalizedString
 			}
 		}
 		SEARCH: {

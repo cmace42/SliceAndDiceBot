@@ -1,47 +1,388 @@
 [
   {
-    "id": 2,
-    "createdAt": "2024-06-28T14:37:48.549Z",
-    "updatedAt": "2024-06-28T14:37:48.549Z",
+    "id": 18,
+    "createdAt": "2024-07-03T15:59:47.250Z",
+    "updatedAt": "2024-07-03T15:59:47.250Z",
     "name": "Stratégie",
-    "description": "Faut réfléchir",
-    "messageID": "1256257251166130248",
-    "parent": null
+    "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+    "messageID": "1258089820664627382",
+    "parent": null,
+    "children": [
+      {
+        "id": 19,
+        "createdAt": "2024-07-03T16:03:57.766Z",
+        "updatedAt": "2024-07-03T16:03:57.766Z",
+        "name": "Conquête",
+        "description": "Prenez des territoires et faites la guerre.",
+        "messageID": "1258090871711338496",
+        "parent": {
+          "id": 18,
+          "createdAt": "2024-07-03T15:59:47.250Z",
+          "updatedAt": "2024-07-03T15:59:47.250Z",
+          "name": "Stratégie",
+          "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+          "messageID": "1258089820664627382",
+          "games": [
+            {
+              "id": 87,
+              "createdAt": "2024-06-26T14:39:11.362Z",
+              "updatedAt": "2024-06-26T14:39:11.362Z",
+              "name": "Blackout",
+              "proprio": "<@171367593670737921>",
+              "description": "Gestion",
+              "timemin": 75,
+              "timemax": 150,
+              "nbrmin": 1,
+              "nbrmax": 4,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538631893057616"
+            }
+          ]
+        },
+        "children": [],
+        "games": [
+          {
+            "id": 61,
+            "createdAt": "2024-06-26T14:39:11.333Z",
+            "updatedAt": "2024-06-26T14:39:11.333Z",
+            "name": "The résistance",
+            "proprio": "<@171367593670737921>",
+            "description": "Déduction, mensonges et trahisons",
+            "timemin": 30,
+            "timemax": 35,
+            "nbrmin": 5,
+            "nbrmax": 10,
+            "available": true,
+            "jdr": false,
+            "messageID": "1235538209757335592"
+          },
+          {
+            "id": 63,
+            "createdAt": "2024-06-26T14:39:11.338Z",
+            "updatedAt": "2024-06-26T14:39:11.339Z",
+            "name": "Tyrant of the underdark",
+            "proprio": "<@171367593670737921>",
+            "description": "Deckbuilding, conquête et alliances",
+            "timemin": 60,
+            "timemax": 180,
+            "nbrmin": 2,
+            "nbrmax": 4,
+            "available": true,
+            "jdr": false,
+            "messageID": "1235538310525354098"
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "createdAt": "2024-07-03T16:56:24.620Z",
+        "updatedAt": "2024-07-03T16:56:24.620Z",
+        "children": [],
+        "games": [],
+        "name": "Deckbuilding",
+        "parent": {
+          "id": 18,
+          "createdAt": "2024-07-03T15:59:47.250Z",
+          "updatedAt": "2024-07-03T15:59:47.250Z",
+          "name": "Stratégie",
+          "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+          "messageID": "1258089820664627382",
+          "games": [
+            {
+              "id": 87,
+              "createdAt": "2024-06-26T14:39:11.362Z",
+              "updatedAt": "2024-06-26T14:39:11.362Z",
+              "name": "Blackout",
+              "proprio": "<@171367593670737921>",
+              "description": "Gestion",
+              "timemin": 75,
+              "timemax": 150,
+              "nbrmin": 1,
+              "nbrmax": 4,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538631893057616"
+            }
+          ]
+        },
+        "description": "Créez le meilleur deck",
+        "messageID": "1258104070523326575"
+      }
+    ],
+    "games": [
+      {
+        "id": 87,
+        "createdAt": "2024-06-26T14:39:11.362Z",
+        "updatedAt": "2024-06-26T14:39:11.362Z",
+        "name": "Blackout",
+        "proprio": "<@171367593670737921>",
+        "description": "Gestion",
+        "timemin": 75,
+        "timemax": 150,
+        "nbrmin": 1,
+        "nbrmax": 4,
+        "available": true,
+        "jdr": false,
+        "messageID": "1235538631893057616"
+      }
+    ]
   },
   {
-    "id": 3,
-    "createdAt": "2024-06-28T14:39:15.756Z",
-    "updatedAt": "2024-06-28T14:39:15.756Z",
-    "name": "Deck",
-    "description": "Faut réfléchir",
-    "messageID": "1256257616875753593",
+    "id": 19,
+    "createdAt": "2024-07-03T16:03:57.766Z",
+    "updatedAt": "2024-07-03T16:03:57.766Z",
+    "name": "Conquête",
+    "description": "Prenez des territoires et faites la guerre.",
+    "messageID": "1258090871711338496",
     "parent": {
-      "id": 2,
-      "createdAt": "2024-06-28T14:37:48.549Z",
-      "updatedAt": "2024-06-28T14:37:48.549Z",
+      "id": 18,
+      "createdAt": "2024-07-03T15:59:47.250Z",
+      "updatedAt": "2024-07-03T15:59:47.250Z",
       "name": "Stratégie",
-      "description": "Faut réfléchir",
-      "messageID": "1256257251166130248",
-      "parent": null
-    }
+      "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+      "messageID": "1258089820664627382",
+      "parent": null,
+      "children": [
+        {
+          "id": 19,
+          "createdAt": "2024-07-03T16:03:57.766Z",
+          "updatedAt": "2024-07-03T16:03:57.766Z",
+          "name": "Conquête",
+          "description": "Prenez des territoires et faites la guerre.",
+          "messageID": "1258090871711338496",
+          "games": [
+            {
+              "id": 61,
+              "createdAt": "2024-06-26T14:39:11.333Z",
+              "updatedAt": "2024-06-26T14:39:11.333Z",
+              "name": "The résistance",
+              "proprio": "<@171367593670737921>",
+              "description": "Déduction, mensonges et trahisons",
+              "timemin": 30,
+              "timemax": 35,
+              "nbrmin": 5,
+              "nbrmax": 10,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538209757335592"
+            },
+            {
+              "id": 63,
+              "createdAt": "2024-06-26T14:39:11.338Z",
+              "updatedAt": "2024-06-26T14:39:11.339Z",
+              "name": "Tyrant of the underdark",
+              "proprio": "<@171367593670737921>",
+              "description": "Deckbuilding, conquête et alliances",
+              "timemin": 60,
+              "timemax": 180,
+              "nbrmin": 2,
+              "nbrmax": 4,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538310525354098"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "createdAt": "2024-07-03T16:56:24.620Z",
+          "updatedAt": "2024-07-03T16:56:24.620Z",
+          "children": [],
+          "games": [],
+          "name": "Deckbuilding",
+          "parent": {
+            "id": 18,
+            "createdAt": "2024-07-03T15:59:47.250Z",
+            "updatedAt": "2024-07-03T15:59:47.250Z",
+            "name": "Stratégie",
+            "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+            "messageID": "1258089820664627382",
+            "games": [
+              {
+                "id": 87,
+                "createdAt": "2024-06-26T14:39:11.362Z",
+                "updatedAt": "2024-06-26T14:39:11.362Z",
+                "name": "Blackout",
+                "proprio": "<@171367593670737921>",
+                "description": "Gestion",
+                "timemin": 75,
+                "timemax": 150,
+                "nbrmin": 1,
+                "nbrmax": 4,
+                "available": true,
+                "jdr": false,
+                "messageID": "1235538631893057616"
+              }
+            ]
+          },
+          "description": "Créez le meilleur deck",
+          "messageID": "1258104070523326575"
+        }
+      ],
+      "games": [
+        {
+          "id": 87,
+          "createdAt": "2024-06-26T14:39:11.362Z",
+          "updatedAt": "2024-06-26T14:39:11.362Z",
+          "name": "Blackout",
+          "proprio": "<@171367593670737921>",
+          "description": "Gestion",
+          "timemin": 75,
+          "timemax": 150,
+          "nbrmin": 1,
+          "nbrmax": 4,
+          "available": true,
+          "jdr": false,
+          "messageID": "1235538631893057616"
+        }
+      ]
+    },
+    "children": [],
+    "games": [
+      {
+        "id": 61,
+        "createdAt": "2024-06-26T14:39:11.333Z",
+        "updatedAt": "2024-06-26T14:39:11.333Z",
+        "name": "The résistance",
+        "proprio": "<@171367593670737921>",
+        "description": "Déduction, mensonges et trahisons",
+        "timemin": 30,
+        "timemax": 35,
+        "nbrmin": 5,
+        "nbrmax": 10,
+        "available": true,
+        "jdr": false,
+        "messageID": "1235538209757335592"
+      },
+      {
+        "id": 63,
+        "createdAt": "2024-06-26T14:39:11.338Z",
+        "updatedAt": "2024-06-26T14:39:11.339Z",
+        "name": "Tyrant of the underdark",
+        "proprio": "<@171367593670737921>",
+        "description": "Deckbuilding, conquête et alliances",
+        "timemin": 60,
+        "timemax": 180,
+        "nbrmin": 2,
+        "nbrmax": 4,
+        "available": true,
+        "jdr": false,
+        "messageID": "1235538310525354098"
+      }
+    ]
   },
   {
-    "id": 4,
-    "createdAt": "2024-06-28T14:39:35.784Z",
-    "updatedAt": "2024-06-28T14:39:35.784Z",
+    "id": 20,
+    "createdAt": "2024-07-03T16:56:24.620Z",
+    "updatedAt": "2024-07-03T16:56:24.620Z",
     "children": [],
     "games": [],
-    "name": "De",
+    "name": "Deckbuilding",
     "parent": {
-      "id": 2,
-      "createdAt": "2024-06-28T14:37:48.549Z",
-      "updatedAt": "2024-06-28T14:37:48.549Z",
+      "id": 18,
+      "createdAt": "2024-07-03T15:59:47.250Z",
+      "updatedAt": "2024-07-03T15:59:47.250Z",
       "name": "Stratégie",
-      "description": "Faut réfléchir",
-      "messageID": "1256257251166130248",
-      "parent": null
+      "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+      "messageID": "1258089820664627382",
+      "parent": null,
+      "children": [
+        {
+          "id": 19,
+          "createdAt": "2024-07-03T16:03:57.766Z",
+          "updatedAt": "2024-07-03T16:03:57.766Z",
+          "name": "Conquête",
+          "description": "Prenez des territoires et faites la guerre.",
+          "messageID": "1258090871711338496",
+          "parent": {
+            "id": 18,
+            "createdAt": "2024-07-03T15:59:47.250Z",
+            "updatedAt": "2024-07-03T15:59:47.250Z",
+            "name": "Stratégie",
+            "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
+            "messageID": "1258089820664627382",
+            "games": [
+              {
+                "id": 87,
+                "createdAt": "2024-06-26T14:39:11.362Z",
+                "updatedAt": "2024-06-26T14:39:11.362Z",
+                "name": "Blackout",
+                "proprio": "<@171367593670737921>",
+                "description": "Gestion",
+                "timemin": 75,
+                "timemax": 150,
+                "nbrmin": 1,
+                "nbrmax": 4,
+                "available": true,
+                "jdr": false,
+                "messageID": "1235538631893057616"
+              }
+            ]
+          },
+          "children": [],
+          "games": [
+            {
+              "id": 61,
+              "createdAt": "2024-06-26T14:39:11.333Z",
+              "updatedAt": "2024-06-26T14:39:11.333Z",
+              "name": "The résistance",
+              "proprio": "<@171367593670737921>",
+              "description": "Déduction, mensonges et trahisons",
+              "timemin": 30,
+              "timemax": 35,
+              "nbrmin": 5,
+              "nbrmax": 10,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538209757335592"
+            },
+            {
+              "id": 63,
+              "createdAt": "2024-06-26T14:39:11.338Z",
+              "updatedAt": "2024-06-26T14:39:11.339Z",
+              "name": "Tyrant of the underdark",
+              "proprio": "<@171367593670737921>",
+              "description": "Deckbuilding, conquête et alliances",
+              "timemin": 60,
+              "timemax": 180,
+              "nbrmin": 2,
+              "nbrmax": 4,
+              "available": true,
+              "jdr": false,
+              "messageID": "1235538310525354098"
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "createdAt": "2024-07-03T16:56:24.620Z",
+          "updatedAt": "2024-07-03T16:56:24.620Z",
+          "games": [],
+          "name": "Deckbuilding",
+          "description": "Créez le meilleur deck",
+          "messageID": "1258104070523326575"
+        }
+      ],
+      "games": [
+        {
+          "id": 87,
+          "createdAt": "2024-06-26T14:39:11.362Z",
+          "updatedAt": "2024-06-26T14:39:11.362Z",
+          "name": "Blackout",
+          "proprio": "<@171367593670737921>",
+          "description": "Gestion",
+          "timemin": 75,
+          "timemax": 150,
+          "nbrmin": 1,
+          "nbrmax": 4,
+          "available": true,
+          "jdr": false,
+          "messageID": "1235538631893057616"
+        }
+      ]
     },
-    "description": "Faut réfléchir",
-    "messageID": "1256257701109825588"
+    "description": "Créez le meilleur deck",
+    "messageID": "1258104070523326575"
   }
 ]

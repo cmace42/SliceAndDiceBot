@@ -7,6 +7,7 @@ const en = {
 		MAINTENANCE: 'This bot is currently in maintenance mode.',
 		GUILD_ONLY: 'This command can only be used in a server.',
 		NSFW: 'This command can only be used in a NSFW channel.',
+		ROLE: 'You do not have the required role to use this command.',
 	},
 	ERRORS: {
 		UNKNOWN: 'An unknown error occurred.',
@@ -92,6 +93,30 @@ const en = {
 					NAME: 'available',
 					DESCRIPTION: 'Is the game still at 42 ?',
 				},
+			},
+		},
+		ADD_CATEGORY: {
+			DESCRIPTION: 'Add a category for games.',
+			OPTIONS: {
+				NAME: {
+					NAME: 'name',
+					DESCRIPTION: 'The name of the category to add.',
+				},
+				PARENT_CATEGORY: {
+					NAME: 'parent_category',
+					DESCRIPTION: 'The parent category if there is one.',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'A definition of the category name.',
+				},
+			},
+			EMBED: {
+				GAMES: 'Games',
+				PARENT: 'Parent Category',
+				CHILDREN: 'Children Categorie(s)',
+				LINK: '[Go to {name:string}]({link:string})',
+				DESCRIPTION: 'Category successfully added.',
 			},
 		},
 		SEARCH: {

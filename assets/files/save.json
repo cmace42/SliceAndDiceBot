@@ -1303,5 +1303,20 @@
     "available": true,
     "jdr": false,
     "messageID": "1235538631893057616"
+  },
+  {
+    "id": 88,
+    "createdAt": "2024-07-02T16:06:14.422Z",
+    "updatedAt": "2024-07-02T16:06:14.422Z",
+    "name": "Azul",
+    "proprio": "asso",
+    "description": "Pose de tuiles pour constituer une mosaïque qui vous rapporte des points",
+    "timemin": 30,
+    "timemax": 45,
+    "nbrmin": 2,
+    "nbrmax": 4,
+    "available": true,
+    "jdr": true,
+    "messageID": "1257729057018089616"
   }
 ]

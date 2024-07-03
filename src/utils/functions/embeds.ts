@@ -6,6 +6,7 @@ import { getColor } from '@/utils/functions'
 import { Category, CategoryRepository } from '@/entities'
 
 const testCategoryChannel = 'https://discord.com/channels/1233081092416999515/1256159215332888617/';
+const listgamesChannel = 'https://discord.com/channels/710524520724824175/1103703411985227917/';
 
 export type GameType = {
 	name: string,
@@ -68,7 +69,7 @@ export async function GameEmbed({ game, locale }: {
 	game: GameType
 	locale: TranslationFunctions
 }): Promise<EmbedBuilder> {
-	const descr:string = game.description || "Missing description."
+	const descr:string = game.description || locale.SHARED.NO_COMMAND_DESCRIPTION()
 	const embed = new EmbedBuilder()
 		.setTitle(game.name)
 		.setColor(getColor('primary'))
@@ -117,38 +118,52 @@ export async function CategoryEmbed({ category, locale, categoryRepo, isNew = fa
     categoryRepo: CategoryRepository
 	isNew: boolean
 }): Promise<EmbedBuilder> {
-    let descr = category.description || "Missing description."
-	if (isNew) {
-        descr += "\n\n" + locale.COMMANDS.REFRESH.EMBED.UNAVAILABLE();
-	} else {
-		const games: GameType[] = await categoryRepo.findAllGamesInCategory(category.id)
-		if (games.length === 0) {
-			descr += "\n\n" + locale.COMMANDS.REFRESH.EMBED.UNAVAILABLE();
-		} else {
-			const gameNames = games.map(game => game.name).join('\n');
-			descr += "\n\n" + gameNames;
-		}
-	}
+    let descr = category.description || locale.SHARED.NO_COMMAND_DESCRIPTION()
 
     const embed = new EmbedBuilder()
         .setTitle(category.name)
         .setColor(getColor('primary'))
-        .setDescription(descr.slice(0, 4096)) // Ensure description does not exceed 4096 characters
+        .setDescription(descr)
 
     // Check if the category has a parent and add a field with a Discord link to the parent category's message
-    if (category.parent && category.parent.messageID) {
-        const parentCategoryLink = `${testCategoryChannel}${category.parent.messageID}`;
-        embed.addFields({ name: 'Parent Category', value: `[Go to Parent Category](${parentCategoryLink})`, inline: false });
+    if (category.parent) {
+		if (!category.parent.messageID)
+			category.parent = await categoryRepo.findOneOrFail({ id: category.parent.id });
+		const parentCategoryLink = `${testCategoryChannel}${category.parent.messageID}`;
+		embed.addFields({
+			name: locale.COMMANDS.ADD_CATEGORY.EMBED.PARENT(),
+			value: locale.COMMANDS.ADD_CATEGORY.EMBED.LINK({name:category.parent.name, link:parentCategoryLink}),
+			inline: false
+		});
+    }
+	let gamesLinks = null;
+	if (!isNew) {
+		const games: GameType[] = await categoryRepo.findAllGamesInCategory(category.id)
+		if (games.length !== 0) {
+			const gameNames = games.map(game =>  {
+				if (!game.messageID)
+					return game.name;
+				const gameLink = `${listgamesChannel}${game.messageID}`;
+				return `[${game.name}](${gameLink})`;
+			}).join('\n');
+			gamesLinks = gameNames;
+		}
+	}
+	embed.addFields({
+		name: locale.COMMANDS.ADD_CATEGORY.EMBED.GAMES(),
+		value: gamesLinks || locale.SHARED.NO_COMMAND_DESCRIPTION(),
+		inline: true
+	});
+
+    const childrenCategories: Category[] = category.children.getItems();
+    if (childrenCategories.length > 0) {
+		let childrenLinks = childrenCategories.map(child => {
+			const childCategoryLink = `${testCategoryChannel}${child.messageID}`;
+			return locale.COMMANDS.ADD_CATEGORY.EMBED.LINK({name:child.name, link:childCategoryLink});
+		}).join('\n');
+		embed.addFields({ name: locale.COMMANDS.ADD_CATEGORY.EMBED.CHILDREN(), value: childrenLinks, inline: false });
     }
 
-    // Example of adding children categories (assuming you have a way to get them)
-    // const childrenCategories: Category[] = await categoryRepo.findChildrenCategories(category.id);
-    // if (childrenCategories.length > 0) {
-    //     childrenCategories.forEach(child => {
-    //         const childCategoryLink = `${testCategoryChannel}${child.messageID}`;
-    //         embed.addFields({ name: child.name, value: `[Go to ${child.name}](${childCategoryLink})`, inline: true });
-    //     });
-    // }
 
     return embed;
 }

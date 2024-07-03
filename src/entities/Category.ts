@@ -37,11 +37,6 @@ export class Category extends CustomBaseEntity {
 	@ManyToMany(() => Game)
 	games: Collection<Game> = new Collection<Game>(this);
 
-	@AfterUpdate()
-	async afterUpdate() {
-	  // Logic to refresh the corresponding Discord message
-	  CategoryRepository.refreshCategoryMessage(this);
-	}
 }
 
 // ===========================================
@@ -49,24 +44,28 @@ export class Category extends CustomBaseEntity {
 // ===========================================
 
 export class CategoryRepository extends EntityRepository<Category> {
-	static refreshCategoryMessage(category: Category) {
-		throw new Error('Method not implemented.')
-	}
 
 	async findAllGamesInCategory(categoryId: number): Promise<Game[]> {
-		const category = await this.findOneOrFail({id: categoryId}, { populate: ['children.games']});
-		let games = [...category.games.getItems()];
+		const category = await this.findOneOrFail({id: categoryId});
+		const uniqueGames = new Map<string, Game>(); // Use a Map to ensure uniqueness
 
 		const processCategory = async (cat: Category) => {
+			await this.populate(cat, ['games', 'children']);
+			for (const game of cat.games.getItems()) {
+				if (!uniqueGames.has(game.id)) { // Check if the game is already added
+					uniqueGames.set(game.id, game); // Use game ID as the key
+				}
+			}
+
 			for (const child of cat.children) {
-				games = [...games, ...child.games.getItems()];
 				await processCategory(child); // Recursively process each child
 			}
 		};
 
 		await processCategory(category);
 
-		return games;
+		// Convert the Map's values to an array
+		return Array.from(uniqueGames.values());
 	}
 
 	async saveAllEntries(filename: string = 'assets/files/category_save.json'): Promise<void> {
@@ -79,6 +78,21 @@ export class CategoryRepository extends EntityRepository<Category> {
 		if (categories.length > 0) {
 			const data = JSON.stringify(categories, null, 2);
 			await fs.writeFile(filename, data);
+		}
+	}
+
+	async delGameFromCategory(categoryName: string, gameName: string): Promise<void> {
+		const category = await this.findOneOrFail({ name: categoryName }, { populate: ['games', 'children'] });
+		const game = category.games.getItems().find(g => g.name === gameName);
+		if (game) {
+			category.games.remove(game);
+			await this.persist(category);
+		} else {
+			// If the game is not found in the current category, search in children
+			for (const child of category.children.getItems()) {
+				// Recursively call this method for each child
+				await this.delGameFromCategory(child.name, gameName);
+			}
 		}
 	}
 

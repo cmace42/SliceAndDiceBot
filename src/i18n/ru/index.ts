@@ -7,6 +7,7 @@ const ru = {
 		MAINTENANCE: 'Бот закрыт на техническое обслуживание.',
 		GUILD_ONLY: 'Эту команду можно использовать только на сервере.',
 		NSFW: 'Эта команда доступна только в чатах 18+.',
+		ROLE: 'You do not have the required role to use this command.',
 	},
 	ERRORS: {
 		UNKNOWN: 'Произошла непонятная ошибка.',
@@ -92,6 +93,30 @@ const ru = {
 					NAME: 'available',
 					DESCRIPTION: 'Is the game still at 42 ?',
 				},
+			},
+		},
+		ADD_CATEGORY: {
+			DESCRIPTION: 'Add a category for games.',
+			OPTIONS: {
+				NAME: {
+					NAME: 'name',
+					DESCRIPTION: 'The name of the category to add.',
+				},
+				PARENT_CATEGORY: {
+					NAME: 'parent_category',
+					DESCRIPTION: 'The parent category if there is one.',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'A definition of the category name.',
+				},
+			},
+			EMBED: {
+				GAMES: 'Games',
+				PARENT: 'Parent Category',
+				CHILDREN: 'Children Categories',
+				LINK: '[Go to {name}]({link})',
+				DESCRIPTION: 'Category successfully added.',
 			},
 		},
 		SEARCH: {

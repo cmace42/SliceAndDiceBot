@@ -7,6 +7,7 @@ const fr = {
 		MAINTENANCE: 'Ce bot est en mode maintenance.',
 		GUILD_ONLY: "Cette commande ne peut être utilisée qu'en serveur.",
 		NSFW: 'Cette commande ne peut être utilisée que dans un salon NSFW.',
+		ROLE: 'Vous ne possèdez pas le rôle nécessaire pour exécuter cette commande.',
 	},
 	ERRORS: {
 		UNKNOWN: 'Une erreur est survenue.',
@@ -92,6 +93,30 @@ const fr = {
 					NAME: 'disponibilité',
 					DESCRIPTION: 'Le jeu est-il actuellement à 42 ?',
 				},
+			},
+		},
+		ADD_CATEGORY: {
+			DESCRIPTION: 'Ajouter une catégorie de jeu.',
+			OPTIONS: {
+				NAME: {
+					NAME: 'nom',
+					DESCRIPTION: 'Le nom de la catégorie à ajouter.',
+				},
+				PARENT_CATEGORY: {
+					NAME: 'catégorie_parent',
+					DESCRIPTION: 'La catégorie parente.',
+				},
+				DESCRIPTION: {
+					NAME: 'description',
+					DESCRIPTION: 'La description de la catégorie.',
+				},
+			},
+			EMBED: {
+				GAMES: 'Jeux',
+				PARENT: 'Catégorie mère',
+				CHILDREN: 'Catégorie(s) fille(s)',
+				LINK: '[Aller à {name}]({link})',
+				DESCRIPTION: 'Catégorie ajoutée avec succès.',
 			},
 		},
 		SEARCH: {
