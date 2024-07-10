@@ -5,7 +5,8 @@ import { TranslationFunctions } from 'src/i18n/i18n-types'
 import { getColor } from '@/utils/functions'
 import { Category, CategoryRepository } from '@/entities'
 
-const testCategoryChannel = 'https://discord.com/channels/1233081092416999515/1256159215332888617/';
+//const testCategoryChannel = 'https://discord.com/channels/1233081092416999515/1256159215332888617/';
+const categoryChannel = 'https://discord.com/channels/710524520724824175/1258379271156535406/';
 const listgamesChannel = 'https://discord.com/channels/710524520724824175/1103703411985227917/';
 
 export type GameType = {
@@ -129,7 +130,7 @@ export async function CategoryEmbed({ category, locale, categoryRepo, isNew = fa
     if (category.parent) {
 		if (!category.parent.messageID)
 			category.parent = await categoryRepo.findOneOrFail({ id: category.parent.id });
-		const parentCategoryLink = `${testCategoryChannel}${category.parent.messageID}`;
+		const parentCategoryLink = `${categoryChannel}${category.parent.messageID}`;
 		embed.addFields({
 			name: locale.COMMANDS.ADD_CATEGORY.EMBED.PARENT(),
 			value: locale.COMMANDS.ADD_CATEGORY.EMBED.LINK({name:category.parent.name, link:parentCategoryLink}),
@@ -158,7 +159,7 @@ export async function CategoryEmbed({ category, locale, categoryRepo, isNew = fa
     const childrenCategories: Category[] = category.children.getItems();
     if (childrenCategories.length > 0) {
 		let childrenLinks = childrenCategories.map(child => {
-			const childCategoryLink = `${testCategoryChannel}${child.messageID}`;
+			const childCategoryLink = `${categoryChannel}${child.messageID}`;
 			return locale.COMMANDS.ADD_CATEGORY.EMBED.LINK({name:child.name, link:childCategoryLink});
 		}).join('\n');
 		embed.addFields({ name: locale.COMMANDS.ADD_CATEGORY.EMBED.CHILDREN(), value: childrenLinks, inline: false });

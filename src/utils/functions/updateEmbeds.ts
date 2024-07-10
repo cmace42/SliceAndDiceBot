@@ -5,7 +5,7 @@ import { TranslationFunctions } from 'src/i18n/i18n-types';
 
 export async function updateCategoryEmbed(category: Category, client: Client, locale: TranslationFunctions, categoryRepo: CategoryRepository) {
   const embed = await CategoryEmbed({ category, locale, categoryRepo, isNew: false }); 
-  const channel = await client.channels.fetch('1256159215332888617') as TextChannel;
+  const channel = await client.channels.fetch('1258379271156535406') as TextChannel;
   await channel.messages.edit(category.messageID, { embeds: [embed] }); // Edit the message with the new embed
 }
 

@@ -134,6 +134,10 @@ const fr = {
 					NAME: 'nbr',
 					DESCRIPTION: 'Le nombre de joueurs.',
 				},
+				CATEGORY: {
+					NAME: 'catégorie',
+					DESCRIPTION: 'Le genre de jeu.',
+				},
 			},
 		},
 		STATS: {

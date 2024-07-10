@@ -2,12 +2,13 @@ import { Category } from '@discordx/utilities'
 import { ApplicationCommandOptionType, CommandInteraction, EmbedBuilder} from 'discord.js'
 import { Client } from 'discordx'
 
-import { Discord, Injectable, Slash, SlashOption } from '@/decorators'
+import { Discord, Injectable, Slash, SlashChoice, SlashOption } from '@/decorators'
 import { Guard, HasRole, UserPermissions } from '@/guards'
 import { Database } from '@/services'
 import {  GameType, GameEmbed, simpleSuccessEmbed, simpleErrorEmbed } from '@/utils/functions'
-import { Game } from '@/entities'
+import { Game, Category as GameCategory } from '@/entities'
 import { Pagination, PaginationType } from '@discordx/pagination'
+import category_list from 'assets/files/category_save.json'
 
 function chunkArray(arr: EmbedBuilder[], size: number): EmbedBuilder[][] {
     return arr.length > size ? [arr.slice(0, size), ...chunkArray(arr.slice(size), size)] : [arr];
@@ -47,17 +48,36 @@ export default class SearchCommand {
 			localizationSource: 'COMMANDS.SEARCH.OPTIONS.NBR',
 			type: ApplicationCommandOptionType.Number,
 		}) nbr: number | undefined,
+		@SlashOption({
+			name: 'category',
+			localizationSource: 'COMMANDS.SEARCH.OPTIONS.CATEGORY',
+			type: ApplicationCommandOptionType.String,
+		})@SlashChoice(
+			...category_list.map((category) => ({name: category.name, value: String(category.id)}))
+		) categoryId: string | undefined,
 			interaction: CommandInteraction,
 			client: Client,
 			{ localize }: InteractionData
 	) {
-		const gameRepo = this.db.get(Game);
-		let games = await gameRepo.find({
-			...(timemin !== undefined && { timemin: { $gte: timemin } }), // gametimemin >= timemin
-			...(timemax !== undefined && { timemax: { $lte: timemax } }), // gametimemax <= timemax
-			...(nbr !== undefined && { nbrmin: { $lte: nbr } }), // gamenbrmin >= nbrmin
-			...(nbr !== undefined && { nbrmax: { $gte: nbr } }), // gamenbrmax <= nbrmax
-		});
+		let games: Game[] = [];
+		if (categoryId) {
+			const categoryRepo = this.db.get(GameCategory);
+			games = await categoryRepo.findAllGamesInCategory(Number(categoryId));
+			games = games.filter(game => {
+				const meetsTimeMinCriteria = timemin === undefined || game.timemin >= timemin;
+				const meetsTimeMaxCriteria = timemax === undefined || game.timemax <= timemax;
+				const meetsNbrCriteria = nbr === undefined || (game.nbrmin <= nbr && game.nbrmax >= nbr);
+				return meetsTimeMinCriteria && meetsTimeMaxCriteria && meetsNbrCriteria;
+			});
+		} else {
+			const gameRepo = this.db.get(Game);
+			games = await gameRepo.find({
+				...(timemin !== undefined && { timemin: { $gte: timemin } }), // gametimemin >= timemin
+				...(timemax !== undefined && { timemax: { $lte: timemax } }), // gametimemax <= timemax
+				...(nbr !== undefined && { nbrmin: { $lte: nbr } }), // gamenbrmin >= nbrmin
+				...(nbr !== undefined && { nbrmax: { $gte: nbr } }), // gamenbrmax <= nbrmax
+			});
+		}
 		if (games.length === 0) { // Corrected check for empty array
 			simpleErrorEmbed(interaction, "No games correspond to those options.");
 		} else {

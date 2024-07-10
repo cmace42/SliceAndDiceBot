@@ -321,7 +321,7 @@ type RootTranslation = {
 					 */
 					NAME: string
 					/**
-					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​i​n​i​m​u​m​.
+					 * T​h​e​ ​m​i​n​i​m​u​m​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​.
 					 */
 					DESCRIPTION: string
 				}
@@ -331,7 +331,7 @@ type RootTranslation = {
 					 */
 					NAME: string
 					/**
-					 * T​h​e​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​ ​m​a​x​i​m​u​m​.
+					 * T​h​e​ ​m​a​x​i​m​u​m​ ​e​x​p​e​c​t​e​d​ ​p​l​a​y​ ​t​i​m​e​.
 					 */
 					DESCRIPTION: string
 				}
@@ -342,6 +342,16 @@ type RootTranslation = {
 					NAME: string
 					/**
 					 * T​h​e​ ​n​u​m​b​e​r​ ​o​f​ ​p​l​a​y​e​r​s​.
+					 */
+					DESCRIPTION: string
+				}
+				CATEGORY: {
+					/**
+					 * c​a​t​e​g​o​r​y
+					 */
+					NAME: string
+					/**
+					 * T​h​e​ ​t​y​p​e​ ​o​f​ ​g​a​m​e​ ​t​o​ ​p​l​a​y​.
 					 */
 					DESCRIPTION: string
 				}
@@ -713,7 +723,7 @@ export type TranslationFunctions = {
 					 */
 					NAME: () => LocalizedString
 					/**
-					 * The expected play time minimum.
+					 * The minimum expected play time.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
@@ -723,7 +733,7 @@ export type TranslationFunctions = {
 					 */
 					NAME: () => LocalizedString
 					/**
-					 * The expected play time maximum.
+					 * The maximum expected play time.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}
@@ -734,6 +744,16 @@ export type TranslationFunctions = {
 					NAME: () => LocalizedString
 					/**
 					 * The number of players.
+					 */
+					DESCRIPTION: () => LocalizedString
+				}
+				CATEGORY: {
+					/**
+					 * category
+					 */
+					NAME: () => LocalizedString
+					/**
+					 * The type of game to play.
 					 */
 					DESCRIPTION: () => LocalizedString
 				}

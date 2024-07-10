@@ -47,7 +47,7 @@ export default class AddCategoryCommand {
 			{ localize }: InteractionData
 	) {
 		const categoryRepo = this.db.get(GameCategory)
-		//categoryRepo.nativeDelete({})
+//		//categoryRepo.nativeDelete({})
 		let categoryData = await categoryRepo.findOne({ name: curname})
 		if (categoryData && categoryData.messageID) {
 			throw new AlreadyExistError(interaction, curname)
@@ -65,7 +65,7 @@ export default class AddCategoryCommand {
 				categoryData.description = description
 
 			const embed = await CategoryEmbed({category:categoryData, locale:localize, categoryRepo, isNew:true})
-			const channel = await client.channels.fetch("1256159215332888617");
+			const channel = await client.channels.fetch("1258379271156535406");
 			if (!channel || !(channel instanceof TextChannel)) {
 				interaction.followUp({
 					content: 'Channel is badly setup.'
@@ -95,7 +95,6 @@ export default class AddCategoryCommand {
 			categoryData.messageID = message.id
 			categoryRepo.persist(categoryData)
 			updateMultipleCategoryEmbeds(categoryData.parent, client, localize, categoryRepo)
-//			//await this.db.em.nativeDelete(GameCategory, {})
 			categoryRepo.saveAllEntries()
 			simpleSuccessEmbed(
 				interaction, localize.COMMANDS.ADD_CATEGORY.EMBED.DESCRIPTION()

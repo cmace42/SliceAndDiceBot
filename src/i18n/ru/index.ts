@@ -134,6 +134,10 @@ const ru = {
 					NAME: 'nbr',
 					DESCRIPTION: 'The number of players.',
 				},
+				CATEGORY: {
+					NAME: 'category',
+					DESCRIPTION: 'The type of game to play.',
+				},
 			},
 		},
 		STATS: {

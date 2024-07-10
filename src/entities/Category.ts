@@ -65,7 +65,7 @@ export class CategoryRepository extends EntityRepository<Category> {
 		await processCategory(category);
 
 		// Convert the Map's values to an array
-		return Array.from(uniqueGames.values());
+		return Array.from(uniqueGames.values()).sort((a, b) => a.name.localeCompare(b.name));
 	}
 
 	async saveAllEntries(filename: string = 'assets/files/category_save.json'): Promise<void> {

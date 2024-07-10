@@ -632,8 +632,8 @@
   {
     "id": 43,
     "createdAt": "2024-06-26T14:39:11.274Z",
-    "updatedAt": "2024-06-26T14:39:11.274Z",
-    "name": "Munchking",
+    "updatedAt": "2024-07-10T14:35:11.324Z",
+    "name": "Munchkin",
     "proprio": "asso",
     "description": null,
     "timemin": 30,
@@ -647,8 +647,8 @@
   {
     "id": 44,
     "createdAt": "2024-06-26T14:39:11.279Z",
-    "updatedAt": "2024-06-26T14:39:11.279Z",
-    "name": "Munchking2",
+    "updatedAt": "2024-07-10T14:36:20.004Z",
+    "name": "Munchkin2",
     "proprio": "asso",
     "description": "DLC pour Munchking",
     "timemin": 30,
@@ -662,10 +662,10 @@
   {
     "id": 45,
     "createdAt": "2024-06-26T14:39:11.282Z",
-    "updatedAt": "2024-06-26T14:39:11.282Z",
-    "name": "MunchkingFull",
+    "updatedAt": "2024-07-10T14:38:01.860Z",
+    "name": "Munchkin Integral",
     "proprio": "motero",
-    "description": "DLC pour Munchking",
+    "description": "Jeu de base + extension de Munchkin, version anglaise",
     "timemin": 30,
     "timemax": null,
     "nbrmin": 3,
@@ -1318,5 +1318,20 @@
     "available": true,
     "jdr": true,
     "messageID": "1257729057018089616"
+  },
+  {
+    "id": 89,
+    "createdAt": "2024-07-10T14:55:00.998Z",
+    "updatedAt": "2024-07-10T14:55:00.998Z",
+    "description": "En tant que Dirigeant de l’une des grandes maisons de Landsraad, érigez votre bannière et rassemblez vos forces et vos espions. La guerre est proche, et au centre du conflit se tient Arrakis - Dune, la planète des sables.",
+    "name": "Dune : Imperium",
+    "available": true,
+    "proprio": "asso",
+    "timemin": 60,
+    "timemax": 120,
+    "nbrmax": 4,
+    "nbrmin": 1,
+    "messageID": "1260610238298718242",
+    "jdr": true
   }
 ]

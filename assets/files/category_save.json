@@ -1,388 +1,307 @@
 [
   {
-    "id": 18,
-    "createdAt": "2024-07-03T15:59:47.250Z",
-    "updatedAt": "2024-07-03T15:59:47.250Z",
+    "id": 22,
     "name": "Stratégie",
     "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-    "messageID": "1258089820664627382",
     "parent": null,
     "children": [
       {
-        "id": 19,
-        "createdAt": "2024-07-03T16:03:57.766Z",
-        "updatedAt": "2024-07-03T16:03:57.766Z",
-        "name": "Conquête",
-        "description": "Prenez des territoires et faites la guerre.",
-        "messageID": "1258090871711338496",
-        "parent": {
-          "id": 18,
-          "createdAt": "2024-07-03T15:59:47.250Z",
-          "updatedAt": "2024-07-03T15:59:47.250Z",
-          "name": "Stratégie",
-          "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-          "messageID": "1258089820664627382",
-          "games": [
-            {
-              "id": 87,
-              "createdAt": "2024-06-26T14:39:11.362Z",
-              "updatedAt": "2024-06-26T14:39:11.362Z",
-              "name": "Blackout",
-              "proprio": "<@171367593670737921>",
-              "description": "Gestion",
-              "timemin": 75,
-              "timemax": 150,
-              "nbrmin": 1,
-              "nbrmax": 4,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538631893057616"
-            }
-          ]
-        },
+        "id": 23,
+        "name": "Combat",
+        "description": "Laisse la possibilité de battre son adversaire avec l'aide d'unités, de statistiques, ou de cartes qui s'affrontent avec celles de l'adversaire.",
+        "parent": 22,
+        "children": [],
+        "games": []
+      },
+      {
+        "id": 24,
+        "name": "Gestion",
+        "description": "Le joueur est amené à gérer et dépenser des ressources de façon optimale pour gagner la partie.",
+        "parent": 22,
         "children": [],
         "games": [
           {
-            "id": 61,
-            "createdAt": "2024-06-26T14:39:11.333Z",
-            "updatedAt": "2024-06-26T14:39:11.333Z",
-            "name": "The résistance",
-            "proprio": "<@171367593670737921>",
-            "description": "Déduction, mensonges et trahisons",
-            "timemin": 30,
-            "timemax": 35,
-            "nbrmin": 5,
-            "nbrmax": 10,
-            "available": true,
-            "jdr": false,
-            "messageID": "1235538209757335592"
+            "id": 3,
+            "name": "Abyss"
           },
           {
-            "id": 63,
-            "createdAt": "2024-06-26T14:39:11.338Z",
-            "updatedAt": "2024-06-26T14:39:11.339Z",
-            "name": "Tyrant of the underdark",
-            "proprio": "<@171367593670737921>",
-            "description": "Deckbuilding, conquête et alliances",
-            "timemin": 60,
-            "timemax": 180,
-            "nbrmin": 2,
-            "nbrmax": 4,
-            "available": true,
-            "jdr": false,
-            "messageID": "1235538310525354098"
+            "id": 8,
+            "name": "Archipelago"
+          },
+          {
+            "id": 12,
+            "name": "Brass: Lancashire Deluxe"
+          },
+          {
+            "id": 13,
+            "name": "Civilization : Une Aube Nouvelle"
+          },
+          {
+            "id": 18,
+            "name": "Coimbra"
+          },
+          {
+            "id": 20,
+            "name": "Concordia"
           }
         ]
       },
       {
-        "id": 20,
-        "createdAt": "2024-07-03T16:56:24.620Z",
-        "updatedAt": "2024-07-03T16:56:24.620Z",
+        "id": 25,
+        "name": "Expansion",
+        "description": "Le joueur est amené à étendre son empire ou son influence sur une grande partie du plateau ou de la zone de jeu.",
+        "parent": 22,
         "children": [],
-        "games": [],
-        "name": "Deckbuilding",
-        "parent": {
-          "id": 18,
-          "createdAt": "2024-07-03T15:59:47.250Z",
-          "updatedAt": "2024-07-03T15:59:47.250Z",
-          "name": "Stratégie",
-          "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-          "messageID": "1258089820664627382",
-          "games": [
-            {
-              "id": 87,
-              "createdAt": "2024-06-26T14:39:11.362Z",
-              "updatedAt": "2024-06-26T14:39:11.362Z",
-              "name": "Blackout",
-              "proprio": "<@171367593670737921>",
-              "description": "Gestion",
-              "timemin": 75,
-              "timemax": 150,
-              "nbrmin": 1,
-              "nbrmax": 4,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538631893057616"
-            }
-          ]
-        },
-        "description": "Créez le meilleur deck",
-        "messageID": "1258104070523326575"
+        "games": []
+      },
+      {
+        "id": 26,
+        "name": "Exploration",
+        "description": "Le.a joueur.euse est encouragé à découvrir des endroits ou zones inexplorées.",
+        "parent": 22,
+        "children": [],
+        "games": [
+          {
+            "id": 3,
+            "name": "Abyss"
+          },
+          {
+            "id": 8,
+            "name": "Archipelago"
+          }
+        ]
       }
     ],
     "games": [
       {
-        "id": 87,
-        "createdAt": "2024-06-26T14:39:11.362Z",
-        "updatedAt": "2024-06-26T14:39:11.362Z",
-        "name": "Blackout",
-        "proprio": "<@171367593670737921>",
-        "description": "Gestion",
-        "timemin": 75,
-        "timemax": 150,
-        "nbrmin": 1,
-        "nbrmax": 4,
-        "available": true,
-        "jdr": false,
-        "messageID": "1235538631893057616"
+        "id": 22,
+        "name": "Crypt"
       }
     ]
   },
   {
-    "id": 19,
-    "createdAt": "2024-07-03T16:03:57.766Z",
-    "updatedAt": "2024-07-03T16:03:57.766Z",
-    "name": "Conquête",
-    "description": "Prenez des territoires et faites la guerre.",
-    "messageID": "1258090871711338496",
-    "parent": {
-      "id": 18,
-      "createdAt": "2024-07-03T15:59:47.250Z",
-      "updatedAt": "2024-07-03T15:59:47.250Z",
-      "name": "Stratégie",
-      "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-      "messageID": "1258089820664627382",
-      "parent": null,
-      "children": [
-        {
-          "id": 19,
-          "createdAt": "2024-07-03T16:03:57.766Z",
-          "updatedAt": "2024-07-03T16:03:57.766Z",
-          "name": "Conquête",
-          "description": "Prenez des territoires et faites la guerre.",
-          "messageID": "1258090871711338496",
-          "games": [
-            {
-              "id": 61,
-              "createdAt": "2024-06-26T14:39:11.333Z",
-              "updatedAt": "2024-06-26T14:39:11.333Z",
-              "name": "The résistance",
-              "proprio": "<@171367593670737921>",
-              "description": "Déduction, mensonges et trahisons",
-              "timemin": 30,
-              "timemax": 35,
-              "nbrmin": 5,
-              "nbrmax": 10,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538209757335592"
-            },
-            {
-              "id": 63,
-              "createdAt": "2024-06-26T14:39:11.338Z",
-              "updatedAt": "2024-06-26T14:39:11.339Z",
-              "name": "Tyrant of the underdark",
-              "proprio": "<@171367593670737921>",
-              "description": "Deckbuilding, conquête et alliances",
-              "timemin": 60,
-              "timemax": 180,
-              "nbrmin": 2,
-              "nbrmax": 4,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538310525354098"
-            }
-          ]
-        },
-        {
-          "id": 20,
-          "createdAt": "2024-07-03T16:56:24.620Z",
-          "updatedAt": "2024-07-03T16:56:24.620Z",
-          "children": [],
-          "games": [],
-          "name": "Deckbuilding",
-          "parent": {
-            "id": 18,
-            "createdAt": "2024-07-03T15:59:47.250Z",
-            "updatedAt": "2024-07-03T15:59:47.250Z",
-            "name": "Stratégie",
-            "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-            "messageID": "1258089820664627382",
-            "games": [
-              {
-                "id": 87,
-                "createdAt": "2024-06-26T14:39:11.362Z",
-                "updatedAt": "2024-06-26T14:39:11.362Z",
-                "name": "Blackout",
-                "proprio": "<@171367593670737921>",
-                "description": "Gestion",
-                "timemin": 75,
-                "timemax": 150,
-                "nbrmin": 1,
-                "nbrmax": 4,
-                "available": true,
-                "jdr": false,
-                "messageID": "1235538631893057616"
-              }
-            ]
-          },
-          "description": "Créez le meilleur deck",
-          "messageID": "1258104070523326575"
-        }
-      ],
-      "games": [
-        {
-          "id": 87,
-          "createdAt": "2024-06-26T14:39:11.362Z",
-          "updatedAt": "2024-06-26T14:39:11.362Z",
-          "name": "Blackout",
-          "proprio": "<@171367593670737921>",
-          "description": "Gestion",
-          "timemin": 75,
-          "timemax": 150,
-          "nbrmin": 1,
-          "nbrmax": 4,
-          "available": true,
-          "jdr": false,
-          "messageID": "1235538631893057616"
-        }
-      ]
-    },
+    "id": 23,
+    "name": "Combat",
+    "description": "Laisse la possibilité de battre son adversaire avec l'aide d'unités, de statistiques, ou de cartes qui s'affrontent avec celles de l'adversaire.",
+    "parent": 22,
+    "children": [],
+    "games": []
+  },
+  {
+    "id": 24,
+    "name": "Gestion",
+    "description": "Le joueur est amené à gérer et dépenser des ressources de façon optimale pour gagner la partie.",
+    "parent": 22,
     "children": [],
     "games": [
       {
-        "id": 61,
-        "createdAt": "2024-06-26T14:39:11.333Z",
-        "updatedAt": "2024-06-26T14:39:11.333Z",
-        "name": "The résistance",
-        "proprio": "<@171367593670737921>",
-        "description": "Déduction, mensonges et trahisons",
-        "timemin": 30,
-        "timemax": 35,
-        "nbrmin": 5,
-        "nbrmax": 10,
-        "available": true,
-        "jdr": false,
-        "messageID": "1235538209757335592"
+        "id": 3,
+        "name": "Abyss"
       },
       {
-        "id": 63,
-        "createdAt": "2024-06-26T14:39:11.338Z",
-        "updatedAt": "2024-06-26T14:39:11.339Z",
-        "name": "Tyrant of the underdark",
-        "proprio": "<@171367593670737921>",
-        "description": "Deckbuilding, conquête et alliances",
-        "timemin": 60,
-        "timemax": 180,
-        "nbrmin": 2,
-        "nbrmax": 4,
-        "available": true,
-        "jdr": false,
-        "messageID": "1235538310525354098"
+        "id": 8,
+        "name": "Archipelago"
+      },
+      {
+        "id": 12,
+        "name": "Brass: Lancashire Deluxe"
+      },
+      {
+        "id": 13,
+        "name": "Civilization : Une Aube Nouvelle"
+      },
+      {
+        "id": 18,
+        "name": "Coimbra"
+      },
+      {
+        "id": 20,
+        "name": "Concordia"
       }
     ]
   },
   {
-    "id": 20,
-    "createdAt": "2024-07-03T16:56:24.620Z",
-    "updatedAt": "2024-07-03T16:56:24.620Z",
+    "id": 25,
+    "name": "Expansion",
+    "description": "Le joueur est amené à étendre son empire ou son influence sur une grande partie du plateau ou de la zone de jeu.",
+    "parent": 22,
+    "children": [],
+    "games": []
+  },
+  {
+    "id": 26,
+    "name": "Exploration",
+    "description": "Le.a joueur.euse est encouragé à découvrir des endroits ou zones inexplorées.",
+    "parent": 22,
+    "children": [],
+    "games": [
+      {
+        "id": 3,
+        "name": "Abyss"
+      },
+      {
+        "id": 8,
+        "name": "Archipelago"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Cartes",
+    "description": "Le.a joueur.euse possède des cartes qu'il.elle peux poser pour jouer.",
+    "parent": null,
+    "children": [
+      {
+        "id": 28,
+        "name": "Deckbuilding",
+        "description": "Le jeu nous permet d'obtenir des cartes afin de se créer un meilleur deck que les cartes de départ afin de nous aider à gagner.",
+        "parent": 27,
+        "children": [],
+        "games": [
+          {
+            "id": 10,
+            "name": "Black Rose Wars"
+          },
+          {
+            "id": 15,
+            "name": "Clank!"
+          },
+          {
+            "id": 16,
+            "name": "Clank! dans l'espace"
+          }
+        ]
+      },
+      {
+        "id": 29,
+        "name": "Plis",
+        "description": "Les jeux de cartes se déroulant par manches qui se finissent usuellement par une ou plusieurs personnes qui remporte la manche, le pli.",
+        "parent": 27,
+        "children": [],
+        "games": [
+          {
+            "id": 35,
+            "name": "Inside Job"
+          }
+        ]
+      }
+    ],
+    "games": [
+      {
+        "id": 9,
+        "name": "Bang!"
+      },
+      {
+        "id": 20,
+        "name": "Concordia"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Deckbuilding",
+    "description": "Le jeu nous permet d'obtenir des cartes afin de se créer un meilleur deck que les cartes de départ afin de nous aider à gagner.",
+    "parent": 27,
+    "children": [],
+    "games": [
+      {
+        "id": 10,
+        "name": "Black Rose Wars"
+      },
+      {
+        "id": 15,
+        "name": "Clank!"
+      },
+      {
+        "id": 16,
+        "name": "Clank! dans l'espace"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Plis",
+    "description": "Les jeux de cartes se déroulant par manches qui se finissent usuellement par une ou plusieurs personnes qui remporte la manche, le pli.",
+    "parent": 27,
+    "children": [],
+    "games": [
+      {
+        "id": 35,
+        "name": "Inside Job"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Hasard",
+    "description": "Jeux dans lesquels les dés ou des cartes tirés aléatoirement peuvent décider de l'issue du jeu. (Ne contient que les jeux où c'est un élément central)",
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 7,
+        "name": "Age of War"
+      },
+      {
+        "id": 22,
+        "name": "Crypt"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Coopératif",
+    "description": "Jeux dans lesquels les joueur.euse.s ont un objectif commun.",
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 8,
+        "name": "Archipelago"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Semi_Coopératif",
+    "description": "Jeux dans lesquels certains joueur.euse.s ont un objectif commun mais il existe plusieurs camps ou équipes.",
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 9,
+        "name": "Bang!"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Ambiance",
+    "description": "Jeux qui encouragent les interactions sociales, et qui peuvent se rejoindre assez facilement.",
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 17,
+        "name": "Code names"
+      },
+      {
+        "id": 19,
+        "name": "Concept"
+      },
+      {
+        "id": 21,
+        "name": "Cranium black"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "createdAt": "2024-07-10T14:48:16.742Z",
+    "updatedAt": "2024-07-10T14:48:16.742Z",
     "children": [],
     "games": [],
-    "name": "Deckbuilding",
-    "parent": {
-      "id": 18,
-      "createdAt": "2024-07-03T15:59:47.250Z",
-      "updatedAt": "2024-07-03T15:59:47.250Z",
-      "name": "Stratégie",
-      "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-      "messageID": "1258089820664627382",
-      "parent": null,
-      "children": [
-        {
-          "id": 19,
-          "createdAt": "2024-07-03T16:03:57.766Z",
-          "updatedAt": "2024-07-03T16:03:57.766Z",
-          "name": "Conquête",
-          "description": "Prenez des territoires et faites la guerre.",
-          "messageID": "1258090871711338496",
-          "parent": {
-            "id": 18,
-            "createdAt": "2024-07-03T15:59:47.250Z",
-            "updatedAt": "2024-07-03T15:59:47.250Z",
-            "name": "Stratégie",
-            "description": "Nécessite une planification à long terme et des prises de décisions aux conséquences multiples.",
-            "messageID": "1258089820664627382",
-            "games": [
-              {
-                "id": 87,
-                "createdAt": "2024-06-26T14:39:11.362Z",
-                "updatedAt": "2024-06-26T14:39:11.362Z",
-                "name": "Blackout",
-                "proprio": "<@171367593670737921>",
-                "description": "Gestion",
-                "timemin": 75,
-                "timemax": 150,
-                "nbrmin": 1,
-                "nbrmax": 4,
-                "available": true,
-                "jdr": false,
-                "messageID": "1235538631893057616"
-              }
-            ]
-          },
-          "children": [],
-          "games": [
-            {
-              "id": 61,
-              "createdAt": "2024-06-26T14:39:11.333Z",
-              "updatedAt": "2024-06-26T14:39:11.333Z",
-              "name": "The résistance",
-              "proprio": "<@171367593670737921>",
-              "description": "Déduction, mensonges et trahisons",
-              "timemin": 30,
-              "timemax": 35,
-              "nbrmin": 5,
-              "nbrmax": 10,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538209757335592"
-            },
-            {
-              "id": 63,
-              "createdAt": "2024-06-26T14:39:11.338Z",
-              "updatedAt": "2024-06-26T14:39:11.339Z",
-              "name": "Tyrant of the underdark",
-              "proprio": "<@171367593670737921>",
-              "description": "Deckbuilding, conquête et alliances",
-              "timemin": 60,
-              "timemax": 180,
-              "nbrmin": 2,
-              "nbrmax": 4,
-              "available": true,
-              "jdr": false,
-              "messageID": "1235538310525354098"
-            }
-          ]
-        },
-        {
-          "id": 20,
-          "createdAt": "2024-07-03T16:56:24.620Z",
-          "updatedAt": "2024-07-03T16:56:24.620Z",
-          "games": [],
-          "name": "Deckbuilding",
-          "description": "Créez le meilleur deck",
-          "messageID": "1258104070523326575"
-        }
-      ],
-      "games": [
-        {
-          "id": 87,
-          "createdAt": "2024-06-26T14:39:11.362Z",
-          "updatedAt": "2024-06-26T14:39:11.362Z",
-          "name": "Blackout",
-          "proprio": "<@171367593670737921>",
-          "description": "Gestion",
-          "timemin": 75,
-          "timemax": 150,
-          "nbrmin": 1,
-          "nbrmax": 4,
-          "available": true,
-          "jdr": false,
-          "messageID": "1235538631893057616"
-        }
-      ]
-    },
-    "description": "Créez le meilleur deck",
-    "messageID": "1258104070523326575"
+    "name": "Déduction",
+    "messageID": "1260608540465299487"
   }
 ]

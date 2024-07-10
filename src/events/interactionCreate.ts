@@ -88,6 +88,7 @@ export default class InteractionCreateEvent {
 		const categoryName = interaction.customId.split('-')[1]; // Extract the categoryId
 		// Adjust the modal's customId to include the categoryId
 		modal.setCustomId(`gameModal-${categoryName}`);
+		//console.log(interaction)
 		await interaction.showModal(modal);
 	}
 
@@ -108,6 +109,7 @@ export default class InteractionCreateEvent {
 		const categoryName = interaction.customId.split('-')[1]; // Extract the categoryId
 		// Adjust the modal's customId to include the categoryId
 		modal.setCustomId(`delgameModal-${categoryName}`);
+		//console.log(interaction)
 		await interaction.showModal(modal);
 	}
 

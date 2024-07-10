@@ -124,15 +124,19 @@ const en = {
 			OPTIONS: {
 				TIMEMIN: {
 					NAME: 'timemin',
-					DESCRIPTION: 'The expected play time minimum.',
+					DESCRIPTION: 'The minimum expected play time.',
 				},
 				TIMEMAX: {
 					NAME: 'timemax',
-					DESCRIPTION: 'The expected play time maximum.',
+					DESCRIPTION: 'The maximum expected play time.',
 				},
 				NBR: {
 					NAME: 'nbr',
 					DESCRIPTION: 'The number of players.',
+				},
+				CATEGORY: {
+					NAME: 'category',
+					DESCRIPTION: 'The type of game to play.',
 				},
 			},
 		},
