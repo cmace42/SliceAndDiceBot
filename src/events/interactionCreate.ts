@@ -6,7 +6,7 @@ import { Discord, Guard, Injectable, On } from '@/decorators'
 import { Guild, User, Game, Category as GameCategory } from '@/entities'
 import { Maintenance } from '@/guards'
 import { Database, Logger, Stats } from '@/services'
-import { syncUser, updateAllCategoryEmbeds, updateCategoryEmbed, updateMultipleCategoryEmbeds } from '@/utils/functions'
+import { simpleErrorEmbed, simpleSuccessEmbed, syncUser, updateAllCategoryEmbeds, updateCategoryEmbed, updateMultipleCategoryEmbeds } from '@/utils/functions'
 import { ActionRowBuilder, ModalBuilder, TextInputBuilder, TextInputStyle } from 'discord.js'
 import { Category } from '@discordx/utilities'
 import { mem } from 'node-os-utils'
@@ -48,7 +48,7 @@ export default class InteractionCreateEvent {
 		this.logger.logInteraction(interaction as AllInteractions)
 
 		// Custom events handle
-		if (interaction.isButton()) {
+		if (interaction.isButton() && interaction.customId.startsWith('open')) {
 			const localize = L[getLocaleFromInteraction(interaction)]
 			let member: GuildMember | null = interaction.member as GuildMember;
 			if (!member || !member.roles.cache.some(role => role.name === "Orga")) {
@@ -56,6 +56,8 @@ export default class InteractionCreateEvent {
 			} else {
 				if (interaction.customId.startsWith('openAddModal'))
 					this.openAddModal(interaction)
+				else if (interaction.customId.startsWith('openEditModal'))
+					this.openEditModal(interaction)
 				else if (interaction.customId.startsWith('openRemoveModal'))
 					this.openRemoveModal(interaction)
 			}
@@ -63,6 +65,8 @@ export default class InteractionCreateEvent {
 			const localize = L[getLocaleFromInteraction(interaction)]
 			if (interaction.customId.startsWith('gameModal')) {
 				this.addGameToCategory(interaction, client, localize)
+			} else if (interaction.customId.startsWith('editCategModal')) {
+				this.editCategory(interaction, client, localize)
 			} else if (interaction.customId.startsWith('delgameModal')) {
 				this.delGameFromCategory(interaction, client, localize)
 			}
@@ -92,6 +96,28 @@ export default class InteractionCreateEvent {
 		await interaction.showModal(modal);
 	}
 
+
+	async openEditModal(interaction: ButtonInteraction<CacheType>) {
+		const categoryName = interaction.customId.split('-')[1]; // Extract the categoryName
+		const textInput = new TextInputBuilder()
+			.setCustomId('edit_game_category')
+			.setLabel('Description for ' + categoryName)
+			.setStyle(TextInputStyle.Short)
+			.setPlaceholder('New description');
+
+		const modal = new ModalBuilder()
+			.setTitle('Change the description')
+			.addComponents(
+				new ActionRowBuilder<TextInputBuilder>().addComponents(textInput)
+			);
+
+		// Show the modal when the button is clicked
+		// Adjust the modal's customId to include the categoryName
+		modal.setCustomId(`editCategModal-${categoryName}`);
+		//console.log(interaction)
+		await interaction.showModal(modal);
+	}
+
 	async openRemoveModal(interaction: ButtonInteraction<CacheType>) {
 		const textInput = new TextInputBuilder()
 			.setCustomId('del_game_category')
@@ -117,7 +143,7 @@ export default class InteractionCreateEvent {
 		const categoryName = interaction.customId.split('-')[1];
 		const gameName = interaction.fields.getTextInputValue('add_game_category');
 		if (!gameName || gameName.length === 0 || categoryName.length === 0) {
-			await interaction.reply({content:'Game couldn\'t be added', ephemeral: true})
+			await simpleErrorEmbed(interaction, 'Game couldn\'t be added')
 			return;
 		}
 		const categoryRepo = this.db.get(GameCategory)
@@ -138,12 +164,32 @@ export default class InteractionCreateEvent {
 		const categoryName = interaction.customId.split('-')[1];
 		const gameName = interaction.fields.getTextInputValue('del_game_category');
 		if (!gameName || gameName.length === 0 || categoryName.length === 0) {
-			await interaction.reply({content: 'Game couldn\'t be removed', ephemeral: true})
+			await simpleErrorEmbed(interaction, 'Game couldn\'t be removed')
 			return;
 		}
 		const categoryRepo = this.db.get(GameCategory)
 		categoryRepo.delGameFromCategory(categoryName, gameName);
 		updateAllCategoryEmbeds(categoryRepo, client, localize);
 		await interaction.reply({content:`Game ${gameName} removed from category ${categoryName}`, ephemeral: true});
+	}
+
+
+	async editCategory(interaction: ModalSubmitInteraction<CacheType>, client: Client, localize: import("src/i18n/i18n-types").TranslationFunctions) {
+		const categoryName = interaction.customId.split('-')[1];
+		const descr = interaction.fields.getTextInputValue('edit_game_category');
+		if (!descr || descr.length === 0 || categoryName.length === 0) {
+			await simpleErrorEmbed(interaction, 'Description couldn\'t be changed')
+			return;
+		}
+		const categoryRepo = this.db.get(GameCategory)
+		const category = await categoryRepo.findOne({ name: categoryName }, { populate: ['games', 'parent'] });
+		if (!category) {
+			await simpleErrorEmbed(interaction, 'Description couldn\'t be changed')
+			return;
+		}
+		category.description = descr;
+		categoryRepo.persist(category);
+		updateCategoryEmbed(category, client, localize, categoryRepo);
+		await simpleSuccessEmbed(interaction, `${categoryName} description changed`);
 	}
 }

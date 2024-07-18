@@ -8,7 +8,7 @@ import { Database } from '@/services'
 import {  GameType, GameEmbed, simpleSuccessEmbed, simpleErrorEmbed } from '@/utils/functions'
 import { Game, Category as GameCategory } from '@/entities'
 import { Pagination, PaginationType } from '@discordx/pagination'
-import category_list from 'assets/files/category_save.json'
+import category_list from '../../../assets/files/category_save.json'
 
 function chunkArray(arr: EmbedBuilder[], size: number): EmbedBuilder[][] {
     return arr.length > size ? [arr.slice(0, size), ...chunkArray(arr.slice(size), size)] : [arr];
@@ -82,7 +82,7 @@ export default class SearchCommand {
 			simpleErrorEmbed(interaction, "No games correspond to those options.");
 		} else {
 			// Transform each game into a GameEmbed promise
-			let embedPromises = games.map(game => GameEmbed({ game, locale: localize }));
+			let embedPromises = games.map(game => GameEmbed({ game, locale: localize, toLink: true }));
 			// Wait for all promises to resolve
 			let embeds = await Promise.all(embedPromises);
 			const totalEmbeds = embeds.length;

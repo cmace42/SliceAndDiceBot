@@ -11,7 +11,24 @@
         "description": "Laisse la possibilité de battre son adversaire avec l'aide d'unités, de statistiques, ou de cartes qui s'affrontent avec celles de l'adversaire.",
         "parent": 22,
         "children": [],
-        "games": []
+        "games": [
+          {
+            "id": 25,
+            "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+          },
+          {
+            "id": 26,
+            "name": "Descent V2"
+          },
+          {
+            "id": 28,
+            "name": "Eclipse"
+          },
+          {
+            "id": 31,
+            "name": "Forbidden Stars"
+          }
+        ]
       },
       {
         "id": 24,
@@ -43,6 +60,30 @@
           {
             "id": 20,
             "name": "Concordia"
+          },
+          {
+            "id": 25,
+            "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+          },
+          {
+            "id": 28,
+            "name": "Eclipse"
+          },
+          {
+            "id": 30,
+            "name": "Five Tribes"
+          },
+          {
+            "id": 31,
+            "name": "Forbidden Stars"
+          },
+          {
+            "id": 32,
+            "name": "Haute tension"
+          },
+          {
+            "id": 29,
+            "name": "Project Seeders: Exodus"
           }
         ]
       },
@@ -52,7 +93,20 @@
         "description": "Le joueur est amené à étendre son empire ou son influence sur une grande partie du plateau ou de la zone de jeu.",
         "parent": 22,
         "children": [],
-        "games": []
+        "games": [
+          {
+            "id": 25,
+            "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+          },
+          {
+            "id": 28,
+            "name": "Eclipse"
+          },
+          {
+            "id": 31,
+            "name": "Forbidden Stars"
+          }
+        ]
       },
       {
         "id": 26,
@@ -68,6 +122,18 @@
           {
             "id": 8,
             "name": "Archipelago"
+          },
+          {
+            "id": 25,
+            "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+          },
+          {
+            "id": 27,
+            "name": "Diamant"
+          },
+          {
+            "id": 28,
+            "name": "Eclipse"
           }
         ]
       }
@@ -85,7 +151,24 @@
     "description": "Laisse la possibilité de battre son adversaire avec l'aide d'unités, de statistiques, ou de cartes qui s'affrontent avec celles de l'adversaire.",
     "parent": 22,
     "children": [],
-    "games": []
+    "games": [
+      {
+        "id": 25,
+        "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+      },
+      {
+        "id": 26,
+        "name": "Descent V2"
+      },
+      {
+        "id": 28,
+        "name": "Eclipse"
+      },
+      {
+        "id": 31,
+        "name": "Forbidden Stars"
+      }
+    ]
   },
   {
     "id": 24,
@@ -117,6 +200,30 @@
       {
         "id": 20,
         "name": "Concordia"
+      },
+      {
+        "id": 25,
+        "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+      },
+      {
+        "id": 28,
+        "name": "Eclipse"
+      },
+      {
+        "id": 30,
+        "name": "Five Tribes"
+      },
+      {
+        "id": 31,
+        "name": "Forbidden Stars"
+      },
+      {
+        "id": 32,
+        "name": "Haute tension"
+      },
+      {
+        "id": 29,
+        "name": "Project Seeders: Exodus"
       }
     ]
   },
@@ -126,7 +233,20 @@
     "description": "Le joueur est amené à étendre son empire ou son influence sur une grande partie du plateau ou de la zone de jeu.",
     "parent": 22,
     "children": [],
-    "games": []
+    "games": [
+      {
+        "id": 25,
+        "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+      },
+      {
+        "id": 28,
+        "name": "Eclipse"
+      },
+      {
+        "id": 31,
+        "name": "Forbidden Stars"
+      }
+    ]
   },
   {
     "id": 26,
@@ -142,6 +262,18 @@
       {
         "id": 8,
         "name": "Archipelago"
+      },
+      {
+        "id": 25,
+        "name": "Der Herr des Eisgartens (Lord of the Ice Garden)"
+      },
+      {
+        "id": 27,
+        "name": "Diamant"
+      },
+      {
+        "id": 28,
+        "name": "Eclipse"
       }
     ]
   },
@@ -245,6 +377,10 @@
       {
         "id": 22,
         "name": "Crypt"
+      },
+      {
+        "id": 27,
+        "name": "Diamant"
       }
     ]
   },
@@ -297,11 +433,46 @@
   },
   {
     "id": 34,
-    "createdAt": "2024-07-10T14:48:16.742Z",
-    "updatedAt": "2024-07-10T14:48:16.742Z",
+    "name": "Déduction",
+    "description": null,
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 19,
+        "name": "Concept"
+      },
+      {
+        "id": 23,
+        "name": "Cryptide"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Jeu de Rôle",
+    "description": "Jeux où on incarne notre personnage et qu'on fait nos actions en les expliquant au maitre du jeu qui décide du succès et des conséquences de nos actes.",
+    "parent": null,
+    "children": [],
+    "games": [
+      {
+        "id": 24,
+        "name": "D&D main quest"
+      },
+      {
+        "id": 33,
+        "name": "Héros & Dragons"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "createdAt": "2024-07-15T20:52:50.793Z",
+    "updatedAt": "2024-07-15T20:52:50.793Z",
     "children": [],
     "games": [],
-    "name": "Déduction",
-    "messageID": "1260608540465299487"
+    "name": "Abstrait",
+    "description": "Jeux avec des règles simples et uniques",
+    "messageID": "1262512226149863505"
   }
 ]

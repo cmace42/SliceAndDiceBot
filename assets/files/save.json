@@ -902,8 +902,8 @@
   {
     "id": 61,
     "createdAt": "2024-06-26T14:39:11.333Z",
-    "updatedAt": "2024-06-26T14:39:11.333Z",
-    "name": "The résistance",
+    "updatedAt": "2024-07-18T07:49:50.000Z",
+    "name": "The Resistance",
     "proprio": "<@171367593670737921>",
     "description": "Déduction, mensonges et trahisons",
     "timemin": 30,
@@ -1007,8 +1007,8 @@
   {
     "id": 68,
     "createdAt": "2024-06-26T14:39:11.347Z",
-    "updatedAt": "2024-06-26T14:39:11.347Z",
-    "name": "Loups-Garous",
+    "updatedAt": "2024-07-18T07:51:47.913Z",
+    "name": "Loups-Garous de Thiercelieux : le Pacte",
     "proprio": null,
     "description": "Rôles et déduction",
     "timemin": 35,
@@ -1142,8 +1142,8 @@
   {
     "id": 77,
     "createdAt": "2024-06-26T14:39:11.356Z",
-    "updatedAt": "2024-06-26T14:39:11.356Z",
-    "name": "Cry Hayoc",
+    "updatedAt": "2024-07-18T07:44:37.548Z",
+    "name": "Cry Havoc",
     "proprio": "<@171367593670737921>",
     "description": "Stratégie Combat",
     "timemin": 60,
@@ -1232,8 +1232,8 @@
   {
     "id": 83,
     "createdAt": "2024-06-26T14:39:11.359Z",
-    "updatedAt": "2024-06-26T14:39:11.359Z",
-    "name": "Haos marauders",
+    "updatedAt": "2024-07-18T07:55:43.230Z",
+    "name": "Chaos Marauders",
     "proprio": null,
     "description": "Stratégie Combat",
     "timemin": 30,
@@ -1323,15 +1323,15 @@
     "id": 89,
     "createdAt": "2024-07-10T14:55:00.998Z",
     "updatedAt": "2024-07-10T14:55:00.998Z",
-    "description": "En tant que Dirigeant de l’une des grandes maisons de Landsraad, érigez votre bannière et rassemblez vos forces et vos espions. La guerre est proche, et au centre du conflit se tient Arrakis - Dune, la planète des sables.",
     "name": "Dune : Imperium",
-    "available": true,
     "proprio": "asso",
+    "description": "En tant que Dirigeant de l’une des grandes maisons de Landsraad, érigez votre bannière et rassemblez vos forces et vos espions. La guerre est proche, et au centre du conflit se tient Arrakis - Dune, la planète des sables.",
     "timemin": 60,
     "timemax": 120,
-    "nbrmax": 4,
     "nbrmin": 1,
-    "messageID": "1260610238298718242",
-    "jdr": true
+    "nbrmax": 4,
+    "available": true,
+    "jdr": true,
+    "messageID": "1260610238298718242"
   }
 ]

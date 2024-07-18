@@ -1,4 +1,4 @@
-import { CommandInteraction } from 'discord.js'
+import { CommandInteraction, RepliableInteraction } from 'discord.js'
 import { SimpleCommandMessage } from 'discordx'
 
 /**
@@ -6,9 +6,11 @@ import { SimpleCommandMessage } from 'discordx'
  * @param interaction
  * @param message
  */
-export async function replyToInteraction(interaction: CommandInteraction | SimpleCommandMessage, message: string | { [key: string]: any }) {
-	if (interaction instanceof CommandInteraction)
-		await interaction.followUp(message)
-	else if (interaction instanceof SimpleCommandMessage)
+export async function replyToInteraction(interaction: RepliableInteraction | CommandInteraction, message: string | { [key: string]: any }) {
+	if (interaction instanceof SimpleCommandMessage)
 		await interaction.message.reply(message)
+	else if (interaction instanceof CommandInteraction)
+		await interaction.followUp(message)
+	else
+		await interaction.reply(message)
 }

@@ -1,4 +1,4 @@
-import { CommandInteraction, EmbedBuilder, EmbedField } from 'discord.js'
+import { CommandInteraction, EmbedBuilder, EmbedField, RepliableInteraction } from 'discord.js'
 
 import { replyToInteraction } from '@/utils/functions'
 import { TranslationFunctions } from 'src/i18n/i18n-types'
@@ -27,12 +27,12 @@ export type GameType = {
  * @param interaction - discord interaction
  * @param message - message to log
  */
-export function simpleSuccessEmbed(interaction: CommandInteraction, message: string) {
+export function simpleSuccessEmbed(interaction: RepliableInteraction | CommandInteraction, message: string) {
 	const embed = new EmbedBuilder()
 		.setColor(0x57F287) // GREEN // see: https://github.com/discordjs/discord.js/blob/main/packages/discord.js/src/util/Colors.js
 		.setTitle(`✅ ${message}`)
 
-	replyToInteraction(interaction, { embeds: [embed] })
+	replyToInteraction(interaction, { embeds: [embed], ephemeral: true})
 }
 
 /**
@@ -40,12 +40,12 @@ export function simpleSuccessEmbed(interaction: CommandInteraction, message: str
  * @param interaction - discord interaction
  * @param message - message to log
  */
-export function simpleErrorEmbed(interaction: CommandInteraction, message: string) {
+export function simpleErrorEmbed(interaction: RepliableInteraction | CommandInteraction, message: string) {
 	const embed = new EmbedBuilder()
 		.setColor(0xED4245) // RED // see: https://github.com/discordjs/discord.js/blob/main/packages/discord.js/src/util/Colors.js
 		.setTitle(`❌ ${message}`)
 
-	replyToInteraction(interaction, { embeds: [embed] })
+	replyToInteraction(interaction, { embeds: [embed], ephemeral: true })
 }
 
 function timeToString(time: number | null) {
@@ -66,12 +66,13 @@ function timeToString(time: number | null) {
 	return res;
 }
 
-export async function GameEmbed({ game, locale }: {
+export async function GameEmbed({ game, locale, toLink = false }: {
 	game: GameType
 	locale: TranslationFunctions
+	toLink?: boolean
 }): Promise<EmbedBuilder> {
 	const descr:string = game.description || locale.SHARED.NO_COMMAND_DESCRIPTION()
-	const embed = new EmbedBuilder()
+	let embed = new EmbedBuilder()
 		.setTitle(game.name)
 		.setColor(getColor('primary'))
 		.setDescription(descr)
@@ -104,6 +105,13 @@ export async function GameEmbed({ game, locale }: {
 		value: locale.COMMANDS.REFRESH.EMBED.BETWEEN({var1:timemin, var2:timemax}),
 		inline: true,
 	})
+	if (toLink && game.messageID) {
+		fields.push({
+			name: 'Link to original message',
+			value: listgamesChannel + game.messageID,
+			inline:true,
+	})
+	}
 	if (game.available)
 		// add the fields to the embed
 		embed.addFields(fields)
@@ -142,14 +150,15 @@ export async function CategoryEmbed({ category, locale, categoryRepo, isNew = fa
 		const games: GameType[] = await categoryRepo.findAllGamesInCategory(category.id)
 		if (games.length !== 0) {
 			const gameNames = games.map(game =>  {
-				if (!game.messageID)
-					return game.name;
-				const gameLink = `${listgamesChannel}${game.messageID}`;
-				return `[${game.name}](${gameLink})`;
+				/* if (!game.messageID) return game.name;
+				return `[${game.name}](${listgamesChannel}${game.messageID})`; */
+				return game.name
 			}).join('\n');
 			gamesLinks = gameNames;
 		}
 	}
+	//console.log(gamesLinks);
+	//console.log(gamesLinks?.length);
 	embed.addFields({
 		name: locale.COMMANDS.ADD_CATEGORY.EMBED.GAMES(),
 		value: gamesLinks || locale.SHARED.NO_COMMAND_DESCRIPTION(),
