@@ -6,7 +6,7 @@ import { SimpleCommandMessage } from 'discordx'
  * @param interaction
  * @param message
  */
-export async function replyToInteraction(interaction: RepliableInteraction | CommandInteraction, message: string | { [key: string]: any }) {
+export async function replyToInteraction(interaction: RepliableInteraction | CommandInteraction | SimpleCommandMessage, message: string | { [key: string]: any }) {
 	if (interaction instanceof SimpleCommandMessage)
 		await interaction.message.reply(message)
 	else if (interaction instanceof CommandInteraction)

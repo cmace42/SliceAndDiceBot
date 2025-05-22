@@ -197,10 +197,10 @@
   {
     "id": 14,
     "createdAt": "2024-06-26T14:39:11.159Z",
-    "updatedAt": "2024-06-26T14:39:11.160Z",
-    "name": "Civilisation : gloire et fortune",
+    "updatedAt": "2024-10-05T12:35:30.828Z",
+    "name": "Sid Meier's Civilization  + DLC Gloire et fortune",
     "proprio": "asso",
-    "description": "DLC de civilisation",
+    "description": "Développez votre empire en fondant des villes et en conquérant vos adversaires. le DLC ajoute des factions et une carte plus grande",
     "timemin": 90,
     "timemax": 180,
     "nbrmin": 2,
@@ -1333,5 +1333,35 @@
     "available": true,
     "jdr": true,
     "messageID": "1260610238298718242"
+  },
+  {
+    "id": 90,
+    "createdAt": "2024-10-05T12:20:52.289Z",
+    "updatedAt": "2024-10-05T12:44:00.118Z",
+    "name": "Mantis",
+    "proprio": "<@317280557216301056>",
+    "description": "Jeu de cartes, pariez pour gagner des points ou voler vos adversaires",
+    "timemin": 10,
+    "timemax": 30,
+    "nbrmin": 2,
+    "nbrmax": 8,
+    "available": true,
+    "jdr": true,
+    "messageID": "1292099188393512980"
+  },
+  {
+    "id": 91,
+    "createdAt": "2024-10-05T12:24:32.593Z",
+    "updatedAt": "2024-10-05T12:24:32.593Z",
+    "name": "Citadelle",
+    "proprio": "asso",
+    "description": "Citadelles est un jeu de bluff, d’intrigues et de stratégie. Les joueurs amassent de l’or qu’ils dépensent ensuite pour bâtir les quartiers qui composent leur cité médiévale.",
+    "timemin": 40,
+    "timemax": 75,
+    "nbrmin": 2,
+    "nbrmax": 8,
+    "available": true,
+    "jdr": true,
+    "messageID": "1292100112255811697"
   }
 ]
